@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blana Inputs</title>
+<link href="styles/main.css" rel="stylesheet"></head>
+<body>
+    <div class="container">
+
+        <form action="#" autocomplete="off">
+
+            <div class="blana blana-text blana-night temp temp-blana-text">
+                <input type="text" id="blana-text-1">
+                <label for="blana-text-1">textlabel</label>
+            </div>
+
+            <div class="blana blana-numeric blana-night temp temp-blana-numeric">
+                <input type="text" id="blana-number-1">
+                <label for="blana-number-1">numberlabel</label>
+            </div>
+
+            <div class="blana blana-interval blana-night temp temp-blana-interval">
+                <div class="blana blana-numeric blana-night">
+                    <input type="text" id="blana-numeric-2">
+                    <label for="blana-numeric-2">minlabel</label>
+                </div>
+
+                <div class="blana-hr-line"></div>
+
+                <div class="blana blana-numeric blana-night">
+                    <input type="text" id="blana-numeric-3">
+                    <label for="blana-numeric-3">maxlabel</label>
+                </div>
+            </div>
+
+            <div class="blana blana-carousel blana-night temp temp-blana-carousel">
+                <div class="blana-arrow blana-arrow-left">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="blana-carousel-content">
+                    <div class="blana-slider">
+                        <div class="blana-slider-content">
+                            <p>Slide 1</p>
+                        </div>
+                        <div class="blana-slider-content">
+                            <p>Slide 2</p>
+                        </div>
+                        <div class="blana-slider-content">
+                            <p>Slide 3</p>
+                        </div>
+                        <div class="blana-slider-content">
+                            <p>Slide 4</p>
+                        </div>
+                        <div class="blana-slider-content">
+                            <p>Slide 5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blana-arrow blana-arrow-right">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        
+
+            <div class="blana blana-select blana-night temp temp-blana-select">
+                <select id="blana-select-1">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                    <option value="6">Option 6</option>
+                </select>
+
+                <label for="blana-select-1">select</label>
+
+                <div class="blana-select-status">
+                    <span class="current">1</span>/<span class="count">4</span>
+                </div>
+            </div>
+
+            <div class="blana blana-submit blana-night temp">
+                <input type="submit" value="Finish">
+            </div>
+
+        </form>
+
+    </div>
+<script type="text/javascript" src="js/main.js"></script></body>
+</html>
