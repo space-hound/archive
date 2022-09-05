@@ -1,0 +1,33 @@
+#menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    visibility: visible;
+
+    form {
+
+        width: 460px;
+        display: flex;
+        flex-direction: column;
+
+        .opt-nickname,
+        .opt-difficulty,
+        .opt-interval {
+            margin-bottom: 30px;
+        }
+
+        .opt-startgame {
+            margin: 30px auto 0 auto;
+        }
+
+    }
+
+    transition: 750ms all ease-out;
+}
+
+#menu-container.game-started {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}

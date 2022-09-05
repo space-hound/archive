@@ -1,0 +1,133 @@
+/*===================================================================
+    CHECKBUTTON ROOT
+===================================================================*/
+
+.aow-checkbox {
+    /* checkbox PADDING */
+    --aow-checkbox-padding: .4rem .8rem .4rem 1rem;
+    /* checkbox GENERAL FONT SIZE AND COLOR */
+    --aow-checkbox-font-size: 1.4rem;
+    --aow-checkbox-font-color: #FFFFFF;
+    /* checkbox OUTER BORDER AND RADIUS */
+    --aow-checkbox-border: solid 1px #313131;
+    --aow-checkbox-radius: .8rem;
+    /* checkbox MARK HOLDER SIZE AND RIGHT POS */
+    --aow-checkbox-mark-holder-size: 1.2rem;
+    --aow-checkbox-mark-holder-right: 1.2rem;
+    /* checkbox MARK HOLDER BORDER AND RADIUS */
+    --aow-checkbox-mark-holder-radius: .3rem;
+    --aow-checkbox-mark-holder-border: solid 1px #313131;
+    /* checkbox MARK SIZE AND COLOR */
+    --aow-checkbox-mark-size: 1.6rem;
+    --aow-checkbox-mark-color: #FFFFFF;
+    /* checkbox CHECKED BACKGROUND AND HOVER */
+    --aow-checkbox-checked: #00C000;
+    --aow-checkbox-checked-hover: #008000;
+    /* checkbox UNCHECK BACKGROUND AND HOVER */
+    --aow-checkbox-unchecked: #FF355E;
+    --aow-checkbox-unchecked-hover:	#C00000;
+    /* checkbox LABEL RIGHT SPACE */
+    --aow-checkbox-label-right-space: calc( 
+        2.4 * var(--aow-checkbox-mark-holder-size)
+    );
+}
+
+.aow-checkbox {
+    position: relative;
+    overflow: hidden;
+
+    display: inline-flex;
+    align-items: center;
+
+    border-radius: var(--aow-checkbox-radius);
+    border: var(--aow-checkbox-border);
+
+
+    font-size: var(--aow-checkbox-font-size);
+    color: var(--aow-checkbox-font-color);
+
+    padding: var(--aow-checkbox-padding);
+
+    cursor: pointer;
+}
+
+/*===================================================================
+    CHECKBUTTON TEXT LABEL
+===================================================================*/
+
+.aow-checkbox .aow-checkbox__label {
+    position: relative;
+    z-index: 1001;
+    padding-right: var(--aow-checkbox-label-right-space);
+
+    user-select: none;
+}
+
+/*===================================================================
+    CHECKBUTTON MARK CONTAINER
+===================================================================*/
+
+.aow-checkbox .aow-checkbox__mark {
+    display: inline-flex;
+
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    right: var(--aow-checkbox-mark-holder-right);
+    transform: translateY(-50%);
+}
+
+/*===================================================================
+    CHECKBUTTON MARK HOLDER
+===================================================================*/
+
+.aow-checkbox .aow-checkbox__mark span {
+    position: relative;
+    width: var(--aow-checkbox-mark-holder-size);
+    height: var(--aow-checkbox-mark-holder-size);
+    border: var(--aow-checkbox-mark-holder-border);
+    border-radius: var(--aow-checkbox-mark-holder-radius);
+    transition: 200ms ease;
+}
+
+/*===================================================================
+    CHECKBUTTON ACTUAL MARK
+===================================================================*/
+
+.aow-checkbox .aow-checkbox__mark span i {
+    opacity: 0;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: var(--aow-checkbox-mark-size);
+    color: var(--aow-checkbox-mark-color);
+}
+
+.aow-checkbox.checked .aow-checkbox__mark span i {
+    opacity: 1;
+}
+
+/*===================================================================
+    CHECKBUTTON COLOR UNCHECKD
+===================================================================*/
+
+.aow-checkbox .aow-checkbox__mark span {
+    box-shadow: 0px 0px 0px 2000px var(--aow-checkbox-unchecked);
+}
+
+.aow-checkbox:hover .aow-checkbox__mark span {
+    box-shadow: 0px 0px 0px 2000px var(--aow-checkbox-unchecked-hover);
+}
+
+/*===================================================================
+    CHECKBUTTON COLOR CHECKED
+===================================================================*/
+
+.aow-checkbox.checked .aow-checkbox__mark span {
+    box-shadow: 0px 0px 0px 2000px var(--aow-checkbox-checked);
+}
+
+.aow-checkbox.checked:hover .aow-checkbox__mark span {
+    box-shadow: 0px 0px 0px 2000px var(--aow-checkbox-checked-hover);
+}

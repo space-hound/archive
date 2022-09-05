@@ -1,0 +1,22 @@
+.Controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: .5rem .5rem 0rem .5rem;
+    margin: 1rem 1rem 1rem 1rem;
+    border: 1px solid black;
+    background-color: teal;
+}
+
+.Controls button {
+    cursor: pointer;
+    padding: .2rem .4rem;
+    border-radius: .2rem;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.Controls .SpacedAfter {
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+}

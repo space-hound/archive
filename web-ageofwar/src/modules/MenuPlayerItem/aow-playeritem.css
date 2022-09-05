@@ -1,0 +1,143 @@
+
+/*===================================================================
+    PLAYER POOL
+===================================================================*/
+
+.new-game__settings .players-pool {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+}
+
+/*===================================================================
+    PLAYER
+===================================================================*/
+
+.new-game__settings .player-pool__player {
+    display: flex;
+    padding: 5px 60px;
+    opacity: 1;
+    transition: 200ms ease;
+}
+
+.new-game__settings .player-pool__player:not(:first-of-type) {
+    border-top: solid 1px #FEFEFA;
+}
+
+
+.new-game__settings .player-pool__player.disabled {
+    pointer-events: none;
+    opacity: 0;
+} 
+
+/*===================================================================
+    PLAYER COL
+===================================================================*/
+
+.new-game__settings .player-pool__player .player-col {
+    display: flex;
+    align-items: center;
+}
+
+/*===================================================================
+    PLAYER NUMBER
+===================================================================*/
+
+.player-pool__player .player-number {
+    width: 5%;
+}
+
+.player-pool__player .player-number h3 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #FEFEFA;
+}
+
+/*===================================================================
+    PLAYER NAME
+===================================================================*/
+
+.player-pool__player .player-name {
+    width: 40%;
+}
+
+/*===================================================================
+    PLAYER ICON
+===================================================================*/
+
+.player-pool__player .player-icon {
+    display: flex;
+    justify-content: center;
+    width: 15%;
+}
+
+.player-pool__player .player-icon__icon {
+    cursor: pointer;
+}
+
+.player-pool__player .player-icon__icon .icon-icon {
+    padding: .8rem 1rem;
+    border-radius: 1rem;
+    border: solid 1px transparent;
+    transition: 250ms ease;
+}
+
+.player-pool__player .player-icon__icon .icon-icon i {
+    font-size: 2.2rem;
+    color: #FEFEFA;
+    transition: 250ms ease;
+}
+
+.player-pool__player .player-icon__icon:hover .icon-icon {
+    border-color: #131313;
+    background-color: #FEFEFA;
+}
+
+.player-pool__player .player-icon__icon:hover .icon-icon i {
+    color: #131313;
+}
+
+/*===================================================================
+    PLAYER COL
+===================================================================*/
+
+.player-pool__player .player-color {
+    display: flex;
+    justify-content: center;
+    width: 15%;
+}
+
+.player-pool__player .player-color .color-color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.player-pool__player .player-color .color-color div {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    border: solid 1px #131313;
+    background-color: springgreen;
+    transition: 150ms ease;
+}
+
+.player-pool__player .player-color:hover .color-color div {
+    width: 90%;
+    height: 90%;
+    border-radius: 25%;
+}
+
+/*===================================================================
+    PLAYER COL
+===================================================================*/
+
+.player-pool__player .player-computer {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+}

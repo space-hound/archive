@@ -1,0 +1,146 @@
+/*===================================================================
+    NAME EDITOR ROOT
+===================================================================*/
+.aow-namebox {
+    --aow-name-editor-color: #FFFFFF;
+
+    --aow-name-editor-display-font-size: 2rem;
+    --aow-name-editor-input-font-size: 2rem;
+
+    --aow-name-editor-button-sizes: 1.2rem;
+    --aow-name-editor-error-size: .8rem;
+}
+
+.aow-namebox {
+    display: inline-flex;
+    align-items: center;
+    /* width: 100%; */
+    color: var(--aow-name-editor-color);
+}
+
+/*===================================================================
+    NAME EDITOR CONTAINER
+===================================================================*/
+
+.aow-namebox .aow-name__container {
+    display: flex;
+    align-items: center;
+    transition: 100ms 100ms ease;
+}
+
+/*===================================================================
+    NAME EDITOR HIDDEN CONTAINER
+===================================================================*/
+
+.aow-namebox .hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/*===================================================================
+    NAME EDITOR BUTTON
+===================================================================*/
+
+.aow-namebox .aow-name__button {
+    font-size: var(--aow-name-editor-button-sizes);
+    cursor: pointer;
+}
+
+/*===================================================================
+    NAME EDITOR ERROR
+===================================================================*/
+.aow-namebox .aow-name__err {
+    position: absolute;
+    left: .5rem; bottom: -1.5rem;
+
+    display: inline-block;
+
+    font-size: var(--aow-name-editor-error-size);
+    color: #FFD12A;
+}
+
+.aow-namebox .aow-name__err p {
+    margin-bottom: 0px;
+}
+
+/*===================================================================
+    NAME EDITOR DISPLAY
+===================================================================*/
+
+.aow-namebox .aow-name__display {
+    font-size: var(--aow-name-editor-display-font-size);
+    position: absolute;
+}
+
+.aow-namebox .aow-name__display p {
+    padding-top: .2rem;
+    padding-left: .4rem;
+    margin-right: 1rem;
+    margin-bottom: .3rem;
+}
+
+/* NAME EDITOR EDIT BUTTON */
+.aow-namebox .aow-name__edit {
+    color: #FFCC33;
+}
+
+/* NAME EDITOR EDIT BUTTON HOVER */
+.aow-namebox .aow-name__edit:hover {
+    color: #FF9933;
+}
+
+/*===================================================================
+    NAME EDITOR EDITOR
+===================================================================*/
+
+.aow-namebox .aow-name__editor {
+    position: relative;
+    justify-content: space-between;
+}
+
+/*===================================================================
+    NAME EDITOR EDITOR INPUT
+===================================================================*/
+
+.aow-namebox .aow-name__editor input {
+    display: block;
+    width: 60%;
+    padding-left: .4rem;
+    font-size: var(--aow-name-editor-display-font-size);
+    color: var(--aow-name-editor-color);
+    outline: none;
+    border: none;
+    border-bottom: solid 1px var(--aow-name-editor-color);
+    background-color: transparent;
+}
+
+/*===================================================================
+    NAME EDITOR EDITOR CLEAR - RANDOM - DELETE
+===================================================================*/
+
+/* NAME EDITOR CLEAR BUTTON */
+.aow-namebox .aow-name__clear {
+    color: #FD5B78;
+}
+/* NAME EDITOR CLEAR BUTTON HOVER */
+.aow-namebox .aow-name__clear:hover {
+    color: #FD0E35;
+}
+
+/* NAME EDITOR RANDOM BUTTON */
+.aow-namebox .aow-name__random {
+    color: #50BFE6;
+}
+/* NAME EDITOR RANDOM BUTTON HOVER */
+.aow-namebox .aow-name__random:hover {
+    color: #0066FF;
+}
+
+/* NAME EDITOR SAVE BUTTON */
+.aow-namebox .aow-name__save {
+    color: #8FD400;
+}
+/* NAME EDITOR SAVE BUTTON HOVER */
+.aow-namebox .aow-name__save:hover {
+    color: #299617;
+}

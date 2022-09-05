@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Circles</title>
+
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: tomato;
+            pointer-events: none;
+        }
+
+        #controls {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: .5rem;
+            margin: 1rem 1rem 0rem 1rem;
+            border: 1px solid black;
+            background-color: teal;
+        }
+
+        #controls button {
+            cursor: pointer;
+            padding: .2rem .4rem;
+            border-radius: .2rem;
+            border: 2px solid black;
+            background-color: white;
+        }
+
+        #controls input[id=circles] {
+            width: 3rem;
+            margin-left: .3rem;
+            padding: .2rem .4rem;
+            border-radius: .2rem;
+            border: 2px solid black;
+        }
+
+        #controls button {
+            margin: 0 .3rem;
+        }
+
+        #controls input[id=speed] {
+            margin-left: .3rem;
+            cursor: pointer;
+        }
+
+        #controls label,
+        #controls button,
+        #controls input {
+            margin-top: .3rem;
+            margin-bottom: .3rem;
+            margin-left: .3rem;
+        }
+
+        #board {
+            position: relative;
+            flex-grow: 1;
+            margin: 1rem;
+            border: 1px solid black;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        #board .circle {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid black;
+            box-sizing: border-box;
+            opacity: .85;
+        }
+    </style>
+
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <form id="controls">
+            <label for="circles">Circles:</label>
+            <input id="circles" name="circles" type="text" value="75">
+            <button id="render">Render</button>
+            <button id="clear">Clear</button>
+            <button id="recolor">Recolor</button>
+            <button id="pause">Pause</button>
+            <button id="play">Play</button>
+            <button id="redirect">Redirect</button>
+            <label for="speed">Speed:</label>
+            <input id="speed" name="speed" type="range" min="-100" max="100" value="0">
+            <label for="size">Size:</label>
+            <input id="size" name="size" type="range" min="-90" max="90" value="0">
+        </form>
+        <div id="board"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+.register-wrapper {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    //min-height: 100vh;
+    background-color: transparent;
+
+    .register-container {
+        box-sizing: border-box;
+        width: 500px;
+        max-width: 500px;
+        padding: 30px 60px;
+        margin: 0px auto 0 auto;
+        border-radius: 10px;
+        background-color: $white;
+    
+        .hr-line {
+            &.first {
+                margin: 1.2rem 0;
+            }
+
+            &.second {
+                margin: 1.2rem 0 0.8rem 0;
+            }
+        }
+
+        .register__logo {
+        }
+    
+        .register__title {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+    
+        .register__name {
+    
+            input {
+                width: 90%;
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+        }
+
+    
+        .register__head-color,
+        .register__body-color {
+            margin-bottom: 1.2rem;
+        }
+
+        .register__head-color,
+        .register__body-color,
+        .register__food-color {
+            font-family: 'Cabin', sans-serif;
+
+            .colorpicker {
+                display: inline-block;
+                width: auto;
+            }
+        }
+
+        .register__game-mode {
+
+            .game-mode__title {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .game-mode__option {
+
+                label.custom-radio {
+                    &:first-of-type {
+                        margin-bottom: 9px;
+                    }
+                }
+            }
+        }
+
+        .register__finish {
+
+            .button-wrapper {
+                position: relative;
+                width: 100%;
+                z-index: 1;
+                overflow: hidden;
+                border-radius: 2rem;
+                .button-gradient {
+                    position: absolute;
+                    width: 300%;
+                    height: 100%;
+                    z-index: -1;
+                    top: 0; left: 0;
+                    background: linear-gradient(to left,#fc00ff, #00dbde, #fc00ff, #00dbde);
+                    transition: all 1.5s;
+                }
+
+                button {
+                    width: 100%;
+                    outline: none;
+                    padding: 9px 0;
+                    border-radius: 1.5rem;
+                    border: solid 1px transparent;
+                    font-family: 'Quicksand', sans-serif;
+                    font-size: 2.2em;
+                    font-weight: 600;
+                    color: #fff;
+                    background-color: transparent;
+                    cursor: pointer;
+    
+                    span {
+                        display: inline-block;
+                        transition: all .3s;
+                    }
+                }
+
+                &:hover {
+                    .button-gradient {
+                        left: -200%;
+                    }
+
+                    button {
+    
+                        span {
+                            margin-left: 9px;
+                            text-transform: uppercase;
+                            letter-spacing: 9px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.destroy {
+        animation: destroy-anim 1s cubic-bezier(0.340, 0.210, 0.000, 0.955) .3s 1 normal forwards;
+        //cubic-bezier(.86, .21, .15, .81)
+        //cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    }
+}
+
+@keyframes destroy-anim {
+
+    from {
+        top: 50%;
+    }
+
+    to {
+        top: calc(-100vh * 1.5);
+        display: none; 
+    }
+}
+

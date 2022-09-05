@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Expenses.Styles">
+
+    <!-- STYLES TEXT BLOCKS ON BOTTOM SECTION -->
+    <Style TargetType="TextBlock" x:Key="BottomTextBlock">
+        <Setter Property="FontFamily" Value="Consolas"/>
+        <Setter Property="FontWeight" Value="DemiBold"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="12"/>
+    </Style>
+
+    <!-- STYLES LABELS ON BOTTOM SECTION -->
+    <Style TargetType="Label" x:Key="BottomLable">
+        <Setter Property="FontFamily" Value="Consolas"/>
+        <Setter Property="FontWeight" Value="DemiBold"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="16"/>
+    </Style>
+</ResourceDictionary>

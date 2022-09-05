@@ -1,0 +1,45 @@
+.map-creator__container {
+    user-select: none;
+    position: relative;
+}
+
+.map-creator__container .aow-cover{
+    background-image:  url("./../../../assets/game-cover.jpg");
+}
+
+.map-creator__container .aow-mask {
+    opacity: .1;
+    background-color: #1B1B1B;
+}
+
+#app {
+    .menu {
+        position: absolute;
+        top: .8rem; left: 1rem;
+
+        i {
+            color: #4a4a4a;
+            font-size: 2rem;
+            transition: all ease 250ms;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            i {
+                color: #1B1B1B;
+            }
+        }
+    }
+}
+
+#map-menu {
+    .modal-body {
+        button {
+            
+            &:not(:last-of-type) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

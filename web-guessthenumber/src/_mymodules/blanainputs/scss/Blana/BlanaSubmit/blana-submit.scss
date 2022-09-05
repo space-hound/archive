@@ -1,0 +1,42 @@
+.blana-submit {
+    width: auto;
+    text-align: inherit;
+    display: inline-block;
+
+    input {
+        padding: 12px 36px;
+        outline: none;
+        border-radius: 120px;
+        border-style: solid;
+        border-width: 1px;
+        cursor: pointer;
+
+        transition: all ease .3s;
+    }
+}
+
+.blana-submit {
+    &.blana-night {
+        input {
+            border-color: $app-red;
+            background-color: $app-black;
+            color: $app-blue;
+
+            font-size: 1.8em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+
+            &:hover {
+                border-color: $app-blue;
+                background-color: $app-black;
+                color: $app-red;
+            }
+
+            &:active {
+                border-color: $app-red;
+                background-color: $app-red;
+                color: $app-blue;
+            }
+        }
+    }
+}

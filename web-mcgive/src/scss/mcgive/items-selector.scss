@@ -1,0 +1,79 @@
+#mcgive {
+    #mc-items {
+        .mc-items-list {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+.mc-items-selector {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mc-items-selector {
+    .mc-item {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 46px;
+        height: 46px;
+        border: solid 2px $color-gray;
+        border-radius: 9px;
+        margin: 3px;
+
+        &.active {
+            background-color: $color-red;
+        }
+
+        &:hover {
+            background-color: $color-blue;
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
+.mc-items-selector {
+    .mc-row {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .mc-col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mc-justify-center {
+        justify-content: center;
+    }
+}
+
+.mc-items-selector {
+    @include sm-down {
+        & > .mc-col {
+            & > .mc-row {
+                &:first-child {
+                    flex-wrap: wrap;
+                }
+
+                .items-others {
+                    flex: 1;
+
+                    & > .mc-row {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}

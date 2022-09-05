@@ -1,0 +1,62 @@
+/*==========================================================================================================*/
+// GENERAL LAYOUT
+/*==========================================================================================================*/
+
+.container {
+    width: 100%;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col,
+.col-auto{
+    position: relative;
+}
+
+.col {
+    width: 100%;
+    max-width: 100%;
+    flex-grow: 1;
+}
+
+.col-auto {
+    width: auto;
+    max-width: 100%;
+    flex: 0 0 auto;
+}
+
+/*==========================================================================================================*/
+// FLEX UTILITIES
+/*==========================================================================================================*/
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-all-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}

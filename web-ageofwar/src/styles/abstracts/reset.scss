@@ -1,0 +1,29 @@
+/*  font-family: 'Rokkitt', serif;  */
+
+@import url('https://fonts.googleapis.com/css?family=Rokkitt:400,500,700');
+
+body {
+    position: relative;
+
+    margin: 0;
+
+    font-family: 'Rokkitt', serif;
+    font-weight: 400;
+    color: #1a1a1a;
+
+    background-color: #fafefa;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}

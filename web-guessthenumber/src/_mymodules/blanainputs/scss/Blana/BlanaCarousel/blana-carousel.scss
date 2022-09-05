@@ -1,0 +1,142 @@
+.blana-carousel {
+    
+    .blana-carousel-content {
+        overflow: hidden;
+    }
+
+    .blana-slider {
+        display: inline-flex;
+        transition: .4s ease-out;
+
+        .blana-slider-content {
+            display: inline-block;
+            width: 456px;
+            padding: 12px 30px;
+            text-align: center;
+        
+            p {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.8em;
+                color: $app-red;
+            }
+        }
+    }
+
+    .blana-arrow-left {
+        top: 50%; left: 0px;
+        transform: translate(-80%, -50%) rotate(-180deg);;
+        margin-left: 10px;
+    }
+
+    .blana-arrow-right {
+        top: 50%; right: 0;
+        transform: translate(80%, -50%) rotate(0deg);;
+        margin-right: 10px;
+    }
+}
+
+.blana-arrow {
+    background-color: $app-black;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 1010;
+    cursor: pointer;
+
+    div {
+        width: 50%; height: 50%;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        background-color: transparent;
+        border-width: 0px 1px 1px 0px;
+        border-style: solid;
+        border-color: $app-red; 
+        transition: .3s ease;
+        cursor: pointer;
+    }
+
+    div:nth-of-type(1) {
+        transform: translate(-30%, -50%) rotate(-45deg);
+    }
+
+    div:nth-of-type(2) {
+        transform: translate(-70%, -50%) rotate(-45deg);
+    }
+
+    div:nth-of-type(3) {
+        transform: translate(-110%, -50%) rotate(-45deg);
+    }
+
+    &:hover {
+
+        div:nth-of-type(1) {
+            animation: arrowind-one .6s ease 0s infinite;
+            transform: translate(-20%, -50%) rotate(-45deg);
+        }
+
+        div:nth-of-type(2) {
+            animation: arrowind-two .6s ease 0s infinite;
+            transform: translate(-70%, -50%) rotate(-45deg);
+        }
+
+        div:nth-of-type(3) {
+            animation: arrowind-three .6s ease 0s infinite;
+            transform: translate(-120%, -50%) rotate(-45deg);
+        }
+    }
+}
+
+@keyframes arrowind-one {
+    from {
+        border-color: $app-red; 
+    }
+
+    33% {
+        border-color: $app-red;
+    }
+
+    66%{
+        border-color: $app-blue;
+    }
+
+    to {
+        border-color: $app-red;
+    }
+}
+
+@keyframes arrowind-two {
+    from {
+        border-color: $app-red; 
+    }
+
+    33% {
+        border-color: $app-blue;
+    }
+
+    66%{
+        border-color: $app-red;
+    }
+
+    to {
+        border-color: $app-red;
+    }
+}
+
+@keyframes arrowind-three {
+    from {
+        border-color: $app-blue; 
+    }
+
+    33% {
+        border-color: $app-red;
+    }
+
+    66%{
+        border-color: $app-red;
+    }
+
+    to {
+        border-color: $app-red;
+    }
+}

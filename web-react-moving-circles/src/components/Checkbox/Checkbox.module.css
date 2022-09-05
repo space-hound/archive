@@ -1,0 +1,10 @@
+.Checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Checkbox input {
+    transform: scale(1.5);
+    cursor: pointer;
+}

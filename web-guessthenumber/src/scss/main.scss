@@ -1,0 +1,19 @@
+// reset some defaults
+@import "./utilities/reset.scss";
+
+//header style
+@import "./components/header/header.scss";
+
+//main view style
+@import "./components/main/main.scss";
+
+//menu view style
+@import "./components/menu/menu.scss";
+
+//game view style
+@import "./components/game/game.scss";
+
+
+.dnone {
+    display: none !important;
+}

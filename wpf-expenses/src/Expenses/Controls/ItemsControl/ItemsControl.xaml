@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="Expenses.Controls.ItemsControl.ItemsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Expenses.Controls.ItemsControl"
+             mc:Ignorable="d"
+             MaxWidth="450">
+    <StackPanel Orientation="Vertical" Margin="0,10,0,0">
+        <DockPanel LastChildFill="True">
+            
+            <TextBox x:Name="ValBox"  DockPanel.Dock="Right" Style="{StaticResource ItemVal}" Width="200"/>
+            <TextBox x:Name="TitleBox" Style="{StaticResource ItemTitle}" Margin="0, 0, 20, 0" Width="auto"/>
+        </DockPanel>
+
+        <DockPanel Margin="0, 10, 0, 0">
+            <TextBox x:Name="DescBox" Style="{StaticResource ItemDesc}" HorizontalAlignment="Stretch"/>
+        </DockPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5,0,0">
+            <Button x:Name="Update" Content="Update" Style="{StaticResource ItemControlButton}"/>
+            <Button x:Name="Delete" Content="Delete" Style="{StaticResource ItemControlButton}" Margin="60, 0"/>
+            <Button x:Name="Switch" Content="Switch" Style="{StaticResource ItemControlButton}"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

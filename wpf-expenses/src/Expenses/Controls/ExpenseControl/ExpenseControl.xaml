@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="Expenses.Controls.ExpenseControl.ExpenseControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Expenses.Controls.ExpenseControl"
+             mc:Ignorable="d" 
+             Width="480" >
+    
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Title:" Style="{StaticResource GeneralLabel}"/>
+            <TextBox x:Name="TitleBox" Style="{StaticResource TitleTextBox}" Margin="0, 0, 20, 0"/>
+            <ComboBox x:Name="TypeBox" SelectedIndex="0" Width="180">
+                <ComboBoxItem Tag="exp">
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Fill="{StaticResource Red}" Style="{StaticResource ItemTypeIcon}"/>
+                        <TextBlock Text="Expense Item" Foreground="{StaticResource Red}"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem Tag="inc">
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Fill="{StaticResource Green}" Style="{StaticResource ItemTypeIcon}"/>
+                        <TextBlock Text="Income Item" Foreground="{StaticResource Green}"/>
+                    </StackPanel>
+                </ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <DockPanel Margin="0,5,0,0">
+            <Label Content="Description :" Style="{StaticResource GeneralLabel}"/>
+            <TextBox x:Name="DescBox" Style="{StaticResource DescriptionBox}" HorizontalAlignment="Stretch"/>
+        </DockPanel>
+
+        <DockPanel Margin="0,5,0,0">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Value:" Style="{StaticResource GeneralLabel}"/>
+                <TextBox x:Name="ValBox" Style="{StaticResource ValueBox}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="AddItem" Content="Add Item" Margin="0, 0 20, 0" Style="{StaticResource ItemSectionButton}">
+                    <Button.IsEnabled>
+                        <MultiBinding Converter="{StaticResource EnablerMultiConverter}">
+                            <Binding ElementName="TitleBox" Path="Text"></Binding>
+                            <Binding ElementName="ValBox" Path="Text"></Binding>
+                        </MultiBinding>
+                    </Button.IsEnabled>
+                </Button>
+                <Button x:Name="ResetItem" Content="Reset Item" Style="{StaticResource ItemSectionButton}"/>
+            </StackPanel>
+        </DockPanel>
+    </StackPanel>
+</UserControl>

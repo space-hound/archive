@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
+:root {
+    --white: #FFF;
+    --black: #313131;
+    --green: #00b248;
+    --red: #bb002f;
+    --yellow: #ffc107;
+}
+
+/* ============================================================================ */
+/* GENERAL */
+/* ============================================================================ */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #313131;
+    background-color: var(--white);
+    position: relative;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+button {
+    outline: none;
+    padding: .6rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.d-none {
+    display: none !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, a:hover, a:visited {
+    color: inherit;
+}
+
+/* ============================================================================ */
+/* RESPONSIVE */
+/* ============================================================================ */
+
+@media only screen and (max-width: 768px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    :root {
+        font-size: 16px;
+    }
+}
+
+/* ============================================================================ */
+/* TITLE */
+/* ============================================================================ */
+
+#title {
+    align-self: center;
+    padding: .8rem 1.6rem;
+    font-size: 1.6rem;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--black) transparent var(--black) transparent;
+}
+
+#title h3 {
+    font-weight: 400;
+}
+
+#title h3 span {
+    font-weight: 600;
+}
+
+/* ============================================================================ */
+/* CONTROLS */
+/* ============================================================================ */
+
+#controls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+/* ============================================================================ */
+/* CONTROLS INTERVAL */
+/* ============================================================================ */
+
+#controls .interval {
+    display: flex;
+}
+
+#controls .interval > div {
+    font-size: 1.4rem;
+}
+
+#controls .interval > div input {
+    width: 8rem;
+    outline: none;
+    font-size: 1.2rem;
+    padding: .3rem .4rem;
+    border: 1px solid var(--black);
+    border-radius: 1rem;
+}
+
+#controls .interval > div input:focus {
+    border-color: var(--green);
+}
+
+#controls .interval > div.max {
+    margin: 0 2rem;
+}
+
+/* ============================================================================ */
+/* CONTROLS BUTTONS */
+/* ============================================================================ */
+
+#controls .actions {
+    margin: 0 2rem;
+}
+
+#controls button.rules {
+    color: var(--red);
+    border-color: var(--red);
+    background-color: var(--white);
+
+    margin-right: 2rem;
+}
+
+#controls button.rules:hover {
+    color: var(--white);
+    background-color: var(--red);
+}
+
+#controls button.start {
+    color: var(--green);
+    border-color: var(--green);
+    background-color: var(--white);
+}
+
+#controls button.start.stop {
+    color: var(--yellow);
+    border-color: var(--yellow);
+}
+
+#controls button.start:hover {
+    color: var(--white);
+    background-color: var(--green);
+}
+
+#controls button.start.stop:hover {
+    color: var(--white);
+    background-color: var(--yellow);
+}
+
+/* ============================================================================ */
+/* DISPLAY */
+/* ============================================================================ */
+
+#display {
+    margin-top: 3rem;
+    padding: 3rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    border-top: 1px solid var(--black);
+}
+
+#display .box {
+    padding: .6rem .8rem;
+    margin: .6rem .4rem;
+    border: 1px solid var(--black);
+}
+
+/* ============================================================================ */
+/* RULES MODAL COVER */
+/* ============================================================================ */
+
+#rules-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    opacity: .8;
+    background-color: var(--black);
+}
+
+/* ============================================================================ */
+/* RULES MODAL MAIN */
+/* ============================================================================ */
+
+#rules {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    padding: 2rem;
+    transform: translateX(-50%);
+    opacity: 1;
+    color: var(--white);
+    background-color: transparent;
+
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+/* ============================================================================ */
+/* RULES MODAL ACTIONS */
+/* ============================================================================ */
+
+#rules .rules__actions {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#rules button.add,
+#rules button.close {
+    color: var(--yellow);
+    border-color: var(--yellow);
+    background-color: transparent;
+}
+
+#rules button.add:hover {
+    color: var(--green);
+    border-color: var(--green);
+}
+
+#rules button.close:hover {
+    color: var(--red);
+    border-color: var(--red);
+}
+
+/* ============================================================================ */
+/* RULES MODAL RULES */
+/* ============================================================================ */
+
+#rules .rules__rules {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+
+    padding-right: 17px;
+    padding-bottom: 2rem;
+    overflow-y: scroll;
+}
+
+#rules .rules__rules::-webkit-scrollbar {
+    width: 10px;
+}
+
+#rules .rules__rules::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#rules .rules__rules::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: var(--white);
+}
+
+/* ============================================================================ */
+/* RULES MODAL RULES - SINGLE RULE */
+/* ============================================================================ */
+
+#rules .rules__rules .rule {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#rules .rules__rules .rule input {
+    width: 10rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--white);
+    font-size: 1.2rem;
+    color: var(--white);
+    background-color: transparent;
+}
+
+#rules .rules__rules .rule span {
+    font-size: 1.4rem;
+}
+
+#rules .rules__rules .rule input,
+#rules .rules__rules .rule > div,
+#rules .rules__rules .rule button,
+#rules .rules__rules .rule span {
+    margin: 0px .6rem;
+}
+
+#rules .rules__rules .rule span {
+    margin-right: 0;
+}
+#rules .rules__rules .rule input.rule__color {
+    margin-left: 0;
+}
+
+
+/* ============================================================================ */
+/* RULES MODAL RULES - SINGLE RULE COLOR PREV */
+/* ============================================================================ */
+
+#rules .rules__rules .rule .rule__color-preview {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    background-color: #ffc107;
+}
+
+/* ============================================================================ */
+/* RULES MODAL RULES - SINGLE RULE DELETE */
+/* ============================================================================ */
+
+#rules .rules__rules .rule button.delete {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 50%;
+    color: var(--white);
+    border-color: var(--white);
+    background-color: var(--red);
+}
+
+#rules .rules__rules .rule button.delete i {
+    font-size: 1rem;
+}
+
+
+/* ============================================================================ */
+/* QUICK FIX */
+/* ============================================================================ */
+
+@media only screen and (max-width: 1036px) {
+    #controls .actions {
+        margin: 2rem 2rem;
+    }
+}
+
+@media only screen and (min-width: 519px) and (max-width: 768px) {
+    #rules .rules__rules .rule input {
+        width: 7rem;
+    }
+}
+
+/* ============================================================================ */
+/* FORM MY POTATO PHONE */
+/* ============================================================================ */
+
+@media only screen and (min-width: 381px) and (max-width: 518px) {
+
+    #rules {
+        padding: 2rem 0rem;
+    }
+
+    #rules .rules__rules {
+        padding-right: 0px;
+    }
+
+    #rules .rules__rules .rule input.rule__keyword {
+        width: 5rem;
+    }
+
+    #rules .rules__rules .rule input.rule__number {
+        width: 3rem;
+    }
+
+}
+
+@media only screen and (max-width: 380px) {
+
+    #rules {
+        padding: 2rem 0rem;
+    }
+
+    #rules .rules__rules {
+        padding-right: 0px;
+    }
+
+    #rules .rules__rules .rule input.rule__keyword {
+        width: 3.2rem;
+    }
+
+    #rules .rules__rules .rule input.rule__number {
+        width: 1.6rem;
+    }
+
+}

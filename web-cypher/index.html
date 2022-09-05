@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hectorush</title>
+
+    <!--================================= BOOTSTRAP =================================-->
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="vendor/fa/css/fontawesome.css">
+    <!--================================== CUSTOM ===================================-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <template id="template__single-letter">
+        <div class="alphabet__letter">
+            <div class="letter__original">
+                <label for="letter__x:{letter}">x:{letter}</label>
+            </div>
+            <i class="fas fa-long-arrow-alt-right"></i>
+            <div class="letter__mask">
+                <input type="text" class="form-control" id="letter__x:{letter}">
+            </div>
+        </div>
+    </template>
+
+    <div id="app">
+        <!--=========================   NAVBAR    =========================-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="cypher-navbar">
+            <a class="navbar-brand" href="javascript:window.location.reload(true)">CaesarCypher</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active" id="cypher-link">
+                        <a class="nav-link inner-link" data-to="#cypher__rule" href="#">Cypher <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link inner-link" data-to="#about" href="#">What is this?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/space-hound/web-cypher" target="_blank">Where
+                            code?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/watch?v=VP623hMbAIA" target="_blank">I don't
+                            care!</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="cypher">
+            <!--=========================   SET RULE    =========================-->
+            <div id="cypher__rule">
+                <!--=========================   RULE MENU    =========================-->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 offset-md-1 col-md-10">
+                            <!--=========================   SELECT RULE    =========================-->
+                            <div id="rule__encrypt">
+                                <div class="jumbotron bg-dark text-white">
+                                    <h1 class="display-5">Hello, Hectorush!</h1>
+                                    <p class="lead">
+                                        Please select the encryption method, and begin annoying your friend!
+                                    </p>
+                                    <hr class="my-4">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6 col-xl-8 mb-5 mb-md-0">
+                                                <select id="encrypt__type" class="form-control">
+                                                    <option selected value="#custom-load">Custom</option>
+                                                    <option value="#caesar-k">Caesar Cipher</option>
+                                                    <option disabled value="#vigenere-k">Vigenère Cipher</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-12 col-md-6 col-xl-4 d-none" id="caesar-k">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <button class="btn btn-danger text-white" type="button"
+                                                            id="caesar-k__dec">
+                                                            <i class="fas fa-minus"></i>
+                                                        </button>
+                                                    </div>
+                                                    <input type="text" id="caesar-k__val"
+                                                        class="form-control text-center" value="7" readonly>
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-success text-white" type="button"
+                                                            id="caesar-k__inc">
+                                                            <i class="fas fa-plus"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-md-6 col-xl-4 text-right" id="custom-load">
+                                                <button class="btn btn-primary text-white" type="button"
+                                                    data-toggle="modal" data-target="#custom-load__modal">
+                                                    Load a custom rule!
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--=========================   ALERT IF ERROR    =========================-->
+                    <div class="row">
+                        <div class="col-12 offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+                            <div id="rule__alert">
+                                <div class="alert alert-danger bg-danger text-light d-none" role="alert">
+                                    <button type="button" class="close text-light" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="alert-heading">Oups, there is a problem!</h4>
+                                    <hr>
+                                    <p class="mb-0 alert__message">Whenever you need to, be sure to use margin utilities
+                                        to keep things
+                                        nice and tidy.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--=========================   ALPHABET    =========================-->
+
+                    <div class="row">
+                        <div class="col-12">
+                            <hr class="bg-gray mt-3 mb-5">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+                            <div id="rule__alphabet" class="container-fluid">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <hr class="bg-gray mt-5 mb-5">
+                        </div>
+                    </div>
+
+                    <!--=========================   FINISH    =========================-->
+
+                    <div class="row">
+                        <div class="col-12 offset-sm-2 col-sm-4 text-center">
+                            <button class="btn btn-lg btn-danger text-white mb-4 mb-md-0 px-5" type="button"
+                                id="rule__reset">
+                                Reset
+                            </button>
+                        </div>
+
+                        <div class="col-12 col-sm-4 text-center">
+                            <button class="btn btn-lg btn-success text-white px-5" type="button" id="rule__finish">
+                                Finish
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <!--=========================   RULE MODAL    =========================-->
+                <div class="modal fade" id="custom-load__modal" tabindex="-1" role="dialog"
+                    aria-labelledby="custom-load__modal" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="custom-load__modal-label">
+                                    Paste rule here!
+                                </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="modal-error" class="text-danger mb-3 d-none"
+                                    style="font-size: 1.4rem; font-weight: 700;">
+                                    Rule is Invalid!
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control border border-primary" id="custom-load__modal-input"
+                                        rows="13"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                    id="custom-load__modal-close">
+                                    Close
+                                </button>
+                                <button type="button" class="btn btn-success" id="custom-load__modal-load">
+                                    Load
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--=========================   ENCRYPT/DECRYPT   =========================-->
+            <div id="cypher__crypt" class="py-3 d-none">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+                            <div class="jumbotron bg-dark my-0 mb-3">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <textarea class="form-control border border-primary" id="input-text"
+                                                rows="7"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 offset-md-1 col-md-10 offset-lg-3 col-lg-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <hr class="bg-gray my-0 py-0 mb-3">
+                                </div>
+                                <div class="col-12">
+                                    <div id="input-type"
+                                        class="d-flex flex-column flex-md-row  justify-content-around align-items-center">
+                                        <div id="back" onclick="window.location.reload(true)">
+                                            <i class="fas fa-long-arrow-alt-left"></i>
+                                        </div>
+                                        <div class="custom-control custom-radio mb-3 mb-md-0">
+                                            <input class="custom-control-input" type="radio" name="cypher" id="to-crypt"
+                                                value="crypt" checked>
+                                            <label class="custom-control-label" for="to-crypt">
+                                                Encrypt
+                                            </label>
+                                        </div>
+                                        <button class="btn btn-danger mb-3 mb-md-0" id="cypher-clear">
+                                            <i class="fas fa-undo mr-2"></i>
+                                            <span>Clear Text</span>
+                                        </button>
+                                        <button class="btn btn-success mb-3 mb-md-0" id="cypher-copy">
+                                            <i class="far fa-clone mr-2"></i>
+                                            <span>Copy Rule</span>
+                                        </button>
+                                        <div class="custom-control custom-radio">
+                                            <input class="custom-control-input" type="radio" name="cypher"
+                                                id="to-decrypt" value="crypt">
+                                            <label class="custom-control-label" for="to-decrypt">
+                                                Decrypt
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <hr class="bg-gray my-0 py-0 mt-3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+                            <div class="jumbotron bg-dark my-0 mt-3">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col">
+                                            <textarea class="form-control border border-primary" id="output-text"
+                                                rows="7" readonly></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="d-none pb-4 px-2 px-md-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1>Lorem ipsum dolor sit amet</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <hr class="bg-gray my-4">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at ante et elit placerat
+                            feugiat. Fusce vitae risus consectetur dui rhoncus pretium non eu orci. Integer egestas nisl
+                            sit amet tellus aliquet aliquam. Nulla posuere risus neque, ac tincidunt ligula convallis
+                            et. Phasellus in est blandit, tincidunt tellus eu, rutrum ipsum. Sed consectetur elementum
+                            nulla. Curabitur eu lacus nec sapien placerat suscipit ut a tortor. Sed mauris nulla,
+                            faucibus id ipsum id, gravida semper dolor. Suspendisse eu justo diam. Nunc ut est quis
+                            felis ullamcorper maximus. Aenean elementum ex sed velit fermentum mollis. Nulla lobortis
+                            lectus eget massa venenatis mattis. Praesent vitae varius lorem, vel scelerisque neque.
+                            Mauris ac nunc in lacus molestie porta at ac eros. Suspendisse accumsan sed elit in euismod.
+                            Fusce ut convallis leo.
+                        </p>
+                        <p>
+                            Curabitur eu hendrerit ipsum. Cras tincidunt urna ut nisi facilisis mollis. Lorem ipsum
+                            dolor sit amet, consectetur adipiscing elit. Praesent cursus sapien ante, a aliquet mi
+                            gravida ut. Nunc sed faucibus sapien. Aliquam sagittis elementum nibh. Mauris volutpat ipsum
+                            nec vehicula porta.
+                        </p>
+                        <p>
+                            Aliquam convallis quis sem vel elementum. Sed congue diam id ornare posuere. Sed maximus
+                            purus pulvinar enim varius venenatis. Aliquam bibendum ante ut nulla elementum malesuada.
+                            Duis ac justo sed tortor molestie pellentesque. Sed sagittis fermentum condimentum. Sed
+                            sagittis, ligula et iaculis suscipit, metus sapien pellentesque dolor, non rutrum nisl eros
+                            id magna. Phasellus dignissim aliquam felis vehicula auctor. Etiam ac gravida libero.
+                            Vestibulum in viverra nisl, vitae sodales ligula. Nam ac ex dignissim, imperdiet augue sed,
+                            imperdiet ipsum. Aliquam nulla est, sodales sed sem sit amet, facilisis interdum nunc.
+                        </p>
+
+                        <hr class="bg-gray my-2">
+
+                        <p>
+                            Quisque lobortis iaculis libero eu egestas. Donec venenatis justo leo, varius pellentesque
+                            massa ultrices vel. Proin volutpat ante vel mauris bibendum, ac tincidunt magna cursus.
+                            Nulla gravida eu tortor at suscipit. Mauris a lorem lacinia, fringilla ante interdum,
+                            facilisis ante. Pellentesque molestie leo id congue pharetra. Ut gravida dolor vel orci
+                            finibus, vel molestie dui consequat. Maecenas lectus dolor, varius sed accumsan non, blandit
+                            dignissim enim. Proin leo lacus, sodales et porttitor vitae, sollicitudin nec nibh. Nam vel
+                            blandit ligula. Vestibulum euismod sodales cursus. Pellentesque volutpat mauris ac massa
+                            ultricies sollicitudin. Sed eu arcu ac dui tempus sagittis ac sit amet massa. Maecenas porta
+                            nisi elit, a viverra lectus sodales quis. Vestibulum ornare urna felis, sit amet dapibus
+                            quam ornare sed.
+                        </p>
+                        <p>
+                            Quisque lobortis iaculis libero eu egestas. Donec venenatis justo leo, varius pellentesque
+                            massa ultrices vel. Proin volutpat ante vel mauris bibendum, ac tincidunt magna cursus.
+                            Nulla gravida eu tortor at suscipit. Mauris a lorem lacinia, fringilla ante interdum,
+                            facilisis ante. Pellentesque molestie leo id congue pharetra. Ut gravida dolor vel orci
+                            finibus, vel molestie dui consequat. Maecenas lectus dolor, varius sed accumsan non, blandit
+                            dignissim enim. Proin leo lacus, sodales et porttitor vitae, sollicitudin nec nibh. Nam vel
+                            blandit ligula. Vestibulum euismod sodales cursus. Pellentesque volutpat mauris ac massa
+                            ultricies sollicitudin. Sed eu arcu ac dui tempus sagittis ac sit amet massa. Maecenas porta
+                            nisi elit, a viverra lectus sodales quis. Vestibulum ornare urna felis, sit amet dapibus
+                            quam ornare sed.
+                        </p>
+                        <p>
+                            Quisque lobortis iaculis libero eu egestas. Donec venenatis justo leo, varius pellentesque
+                            massa ultrices vel. Proin volutpat ante vel mauris bibendum, ac tincidunt magna cursus.
+                            Nulla gravida eu tortor at suscipit. Mauris a lorem lacinia, fringilla ante interdum,
+                            facilisis ante. Pellentesque molestie leo id congue pharetra. Ut gravida dolor vel orci
+                            finibus, vel molestie dui consequat. Maecenas lectus dolor, varius sed accumsan non, blandit
+                            dignissim enim. Proin leo lacus, sodales et porttitor vitae, sollicitudin nec nibh. Nam vel
+                            blandit ligula. Vestibulum euismod sodales cursus. Pellentesque volutpat mauris ac massa
+                            ultricies sollicitudin. Sed eu arcu ac dui tempus sagittis ac sit amet massa. Maecenas porta
+                            nisi elit, a viverra lectus sodales quis. Vestibulum ornare urna felis, sit amet dapibus
+                            quam ornare sed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=================================== JQUERY ==================================-->
+    <script type="text/javascript" src="vendor/jquery/jquery.js"></script>
+    <!--=================================== POPPER ==================================-->
+    <script type="text/javascript" src="vendor/popper/popper.js"></script>
+    <!--================================= BOOTSTRAP =================================-->
+    <script type="text/javascript" src="vendor/bootstrap/bootstrap.js"></script>
+    <!--================================== REACTOR ===================================-->
+    <script type="text/javascript" src="js/cypher-reactor/reactor.js"></script>
+    <!--================================== STATE ===================================-->
+    <script type="text/javascript" src="js/cypher-state/state.js"></script>
+    <!--================================== OTHERS ===================================-->
+    <script type="text/javascript" src="js/cypher-others/others.js"></script>
+    <!--================================== MENU ===================================-->
+    <script type="text/javascript" src="js/cypher-menu/menu-utils.js"></script>
+    <script type="text/javascript" src="js/cypher-menu/menu-letter.js"></script>
+    <script type="text/javascript" src="js/cypher-menu/menu-alphabet.js"></script>
+    <script type="text/javascript" src="js/cypher-menu/menu-selection.js"></script>
+    <script type="text/javascript" src="js/cypher-menu/menu-alert.js"></script>
+    <script type="text/javascript" src="js/cypher-menu/menu-validation.js"></script>
+    <script type="text/javascript" src="js/cypher-menu/menu.js"></script>
+    <!--================================== APP ===================================-->
+    <script type="text/javascript" src="js/cypher-cypher/cypher.js"></script>
+    <!--================================== MAIN ===================================-->
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+{
+    "private": true,
+    "name": "minecraft-give-generator",
+    "version": "1.0.0",
+    "description": "minecraft 1.12 console give commands give generator",
+    "keywords": [
+        "minecraft",
+        "console commands",
+        "give generator",
+        "enchantments",
+        "items"
+    ],
+    "main": "main.js",
+    "scripts": {
+        "watch": "webpack-dev-server --mode=development --config webpack.config.js --open",
+        "build": "webpack --mode=production --config webpack.config.js"
+    },
+    "author": "Borz Alexandru Mihai",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.4.4",
+        "babel-loader": "^8.0.5",
+        "babel-preset-env": "^1.7.0",
+        "clean-webpack-plugin": "^2.0.1",
+        "css-loader": "^2.1.1",
+        "file-loader": "^3.0.1",
+        "html-loader": "^0.5.5",
+        "html-webpack-plugin": "^3.2.0",
+        "mini-css-extract-plugin": "^0.6.0",
+        "node-sass": "^4.12.0",
+        "optimize-css-assets-webpack-plugin": "^5.0.1",
+        "sass-loader": "^7.1.0",
+        "style-loader": "^0.23.1",
+        "webpack": "^4.30.0",
+        "webpack-cli": "^3.3.1",
+        "webpack-dev-server": "^3.3.1"
+    }
+}

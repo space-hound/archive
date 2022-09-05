@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mcGive</title>
+</head>
+<body>
+    <div class="site-container">
+        <header>
+            <div class="header-content">
+                <div class="logo"><h1>mc<span>/give</span></h1></div>
+                <div class="menu">
+                    <ul class="nav-bar">
+                        <li class="nav-item">
+                            <a href="https://github.com/space-hound/web-mcgive" target="_blank">code</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.youtube.com/watch?v=G1IbRujko-A" target="_blank">others</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <section class="content">
+            <div class="content-content">
+                <div class="title">
+                    <h1>Minecraft Enchanted Items <span>/give</span> Generator</h1>
+                </div>
+
+                <div id="mcgive">
+                    <div class="mc-container">
+                        <div id="mc-configuration">
+                            <div class="sub-title">
+                                <h2>Set Configuration</h2>
+                            </div>
+
+                            <div class="mc-player-name has-text-input">
+                                <input type="text" placeholder="To whom to give the item? (DEFAULT @p)">
+                            </div>
+
+                            <div class="mc-item-lore has-text-input">
+                                <input type="text" placeholder="Lore text (the purple text below name)">
+                            </div>
+
+                            <div class="mc-item-unbreakable has-check-input">
+                                <label class="custom-check">
+                                    <span>Unbreaking:</span>
+                                    <input type="checkbox" value="1">
+                                    <div class="checkmark">
+                                        <div class="checker"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="mc-items">
+                            <div class="sub-title">
+                                <h2>Select Desired Item</h2>
+                            </div>
+
+                            <div class="mc-items-list">
+                            </div>
+                        </div>
+
+                        <div id="mc-encantments">
+                            <div class="sub-title">
+                                <h2>Select Enchantments</h2>
+                            </div>
+
+                            <div class="mc-ench-list">
+                            </div>
+                        </div>
+
+                        <div id="mc-flags">
+                            <div class="sub-title">
+                                <h2>Hide Flags</h2>
+                            </div>
+
+                            <div class="mc-hide-ench has-check-input">
+                                <label class="custom-check">
+                                    <span>Enchantments:</span>
+                                    <input type="checkbox" value="1">
+                                    <div class="checkmark">
+                                        <div class="checker"></div>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="mc-hide-unbreaking has-check-input">
+                                <label class="custom-check">
+                                    <span>Unbreaking:</span>
+                                    <input type="checkbox" value="4">
+                                    <div class="checkmark">
+                                        <div class="checker"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="mc-output">
+                            <div class="sub-title">
+                                <h2>The Command</h2>
+                            </div>
+
+                            <div class="copy">
+                                <button>
+                                    <div class="cross"></div>
+                                    <div class="text">Copy</div>
+                                </button>
+                            </div>
+
+                            <div class="command has-text-input">
+                                <textarea cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made by Borz Alexandru Mihai.</p> 
+            <p>"Minecraft" content and materials are trademarks and copyrights of Mojang and its licensors. This app is not affiliated with Mojang.</p>
+            <p>Icons taken from <a href="https://github.com/PrismarineJS/minecraft-assets">here</a> (Thank you)</p>
+            <p>This app purpose is for study only.</p>
+        </footer>
+    </div>
+</body>
+</html>

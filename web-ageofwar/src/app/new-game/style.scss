@@ -1,0 +1,167 @@
+/*===================================================================
+    IMPORTS
+===================================================================*/
+
+// @import "./aow-checkbox.css";
+// @import "./aow-selectbox.css";
+// @import "./aow-namebox.css";
+// @import "./aow-itemslist.css";
+// @import "./aow-playeritem.css";
+
+.aow-wrapper {
+    position: relative;
+    width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
+.aow-cover {
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aow-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+/*===================================================================
+    NEW GAME ROOT
+===================================================================*/
+
+#new-game {
+
+    --aow-new-mask: #1B1B1B;
+
+    --aow-new-return-color: #FF355E;
+    --aow-new-return-height: 90px;
+    
+    --aow-new-color: #FEFEFA;
+}
+
+/*===================================================================
+    NEW GAME COVER
+===================================================================*/
+
+#new-game .new-game__cover {
+    background-image: url(./../../../assets/new-cover.jpg);
+}
+
+#new-game .new-game__mask {
+    background-color: var(--aow-new-mask);
+}
+
+/*===================================================================
+    TO MAIN MENU CONTAINER
+===================================================================*/
+
+#new-game .new-game__return {
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 1001;
+    
+    width: 180px;
+    height: 90px;
+
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    overflow: hidden;
+}
+
+#new-game .new-game__return i,
+#new-game .new-game__return span {
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+}
+
+#new-game .new-game__return i {
+    top: 50%; left: 30%;
+    transform: translate(-30%, -50%);
+    font-size: 150%;
+    color: var(--aow-new-color);
+    transition: left 200ms 100ms ease;
+}
+
+#new-game .new-game__return:hover i {
+    left: -100%;
+    color: var(--aow-new-return-color);
+}
+
+#new-game .new-game__return span {
+    top: -100%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--aow-new-return-color);
+    transition: top 200ms 100ms ease;
+}
+
+#new-game .new-game__return:hover span {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*===================================================================
+    
+===================================================================*/
+
+.new-game__settings {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 90px 60px 30px 60px;
+}
+
+.new-game__settings .settings-row {
+    width: 100%;
+    display: flex;
+}
+
+.new-game__settings .settings__players,
+.new-game__settings .settings__gametype {
+    display: flex;
+    align-items: center;
+}
+
+.new-game__settings .settings__players h3,
+.new-game__settings .settings__gametype h3 {
+    margin: 0;
+    margin-right: 1rem;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #FEFEFA;
+}
+
+.new-game__settings .settings__players {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.finish__row {
+    margin-top: 90px;
+
+    display: flex;
+    justify-content: center;
+
+    button {
+        border: 1px solid #000;
+        background-color: #214fc6;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: #fff;
+
+        &:hover {
+            background-color: darken(#214fc6, 10);
+            color: #fff;
+        }
+    }
+}

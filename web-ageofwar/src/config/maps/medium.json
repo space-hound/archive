@@ -1,0 +1,259 @@
+[
+    {
+        "id": 0,
+        "x": 727,
+        "y": 232,
+        "img": "./assets/castles/main5.png",
+        "size": 64,
+        "weapons": {
+            "sword": 2,
+            "archer": 1,
+            "ship": 1
+        },
+        "others": [],
+        "isConquest": false,
+        "score": 75,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 1,
+        "x": 642,
+        "y": 252,
+        "img": "./assets/castles/aux5.png",
+        "size": 48,
+        "weapons": {
+            "sword": 2,
+            "pikeman": 1
+        },
+        "others": [],
+        "isConquest": false,
+        "score": 50,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 2,
+        "x": 770,
+        "y": 338,
+        "img": "./assets/castles/aux5.png",
+        "size": 32,
+        "weapons": {
+            "sword": 3
+        },
+        "others": [],
+        "isConquest": false,
+        "score": 25,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 3,
+        "x": 690,
+        "y": 328,
+        "img": "./assets/castles/aux5.png",
+        "size": 32,
+        "weapons": {
+            "sword": 3
+        },
+        "others": [],
+        "isConquest": false,
+        "score": 25,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 4,
+        "x": 1098,
+        "y": 267,
+        "img": "./assets/castles/main4.png",
+        "size": 64,
+        "weapons": {
+            "sword": 3,
+            "knight": 1,
+            "elephant": 1
+        },
+        "others": [],
+        "isConquest": false,
+        "score": 125,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 5,
+        "x": 1032,
+        "y": 302,
+        "img": "./assets/castles/aux4.png",
+        "size": 32,
+        "weapons": {
+            "sword": 2,
+            "archer": 1
+        },
+        "others": [],
+        "isConquest": false,
+        "score": 50,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 6,
+        "x": 1113,
+        "y": 353,
+        "img": "./assets/castles/aux4.png",
+        "size": 32,
+        "weapons": {
+            "sword": 2,
+            "pikeman": 1
+        },
+        "others": [],
+        "isConquest": false,
+        "score": 50,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 7,
+        "x": 1180,
+        "y": 263,
+        "img": "./assets/castles/aux4.png",
+        "size": 48,
+        "weapons": {
+            "sword": 1,
+            "archer": 1,
+            "knight": 1
+        },
+        "others": [],
+        "isConquest": false,
+        "score": 75,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 8,
+        "x": 300,
+        "y": 182,
+        "img": "./assets/castles/main6.png",
+        "size": 64,
+        "weapons": {
+            "sword": 2,
+            "archer": 1,
+            "knight": 1,
+            "siege": 1
+        },
+        "others": [],
+        "isConquest": false,
+        "score": 150,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 9,
+        "x": 253,
+        "y": 234,
+        "img": "./assets/castles/aux6.png",
+        "size": 32,
+        "weapons": {
+            "sword": 2,
+            "archer": 1
+        },
+        "others": [],
+        "isConquest": false,
+        "score": 75,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 10,
+        "x": 330,
+        "y": 269,
+        "img": "./assets/castles/aux6.png",
+        "size": 32,
+        "weapons": {
+            "sword": 2,
+            "pikeman": 1
+        },
+        "others": [],
+        "isConquest": false,
+        "score": 75,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 11,
+        "x": 485,
+        "y": 349,
+        "img": "./assets/castles/others1.png",
+        "size": 64,
+        "weapons": {},
+        "others": [],
+        "isConquest": true,
+        "score": 15,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 12,
+        "x": 642,
+        "y": 108,
+        "img": "./assets/castles/others2.png",
+        "size": 48,
+        "weapons": {},
+        "others": [],
+        "isConquest": true,
+        "score": 25,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 13,
+        "x": 874,
+        "y": 284,
+        "img": "./assets/castles/others3.png",
+        "size": 48,
+        "weapons": {},
+        "others": [],
+        "isConquest": true,
+        "score": 35,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 14,
+        "x": 1028,
+        "y": 543,
+        "img": "./assets/castles/others4.png",
+        "size": 64,
+        "weapons": {},
+        "others": [],
+        "isConquest": true,
+        "score": 45,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 15,
+        "x": 221,
+        "y": 449,
+        "img": "./assets/castles/others5.png",
+        "size": 64,
+        "weapons": {},
+        "others": [],
+        "isConquest": true,
+        "score": 55,
+        "W": 1467,
+        "H": 774
+    },
+    {
+        "id": 16,
+        "x": 543,
+        "y": 573,
+        "img": "./assets/castles/others6.png",
+        "size": 48,
+        "weapons": {},
+        "others": [],
+        "isConquest": true,
+        "score": 100,
+        "W": 1467,
+        "H": 774
+    }
+]

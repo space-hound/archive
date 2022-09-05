@@ -1,0 +1,700 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i');
+/*************************************************************************************
+        font-family: 'Roboto Condensed', sans-serif;
+
+        BLACK:              #000
+        WHITE:              #fff
+        STEEL GREY:         #41464b
+        GREENISH BLUE:      #34c6d3
+        BLUE BAYOUX:        #64707b
+*************************************************************************************/
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h3 {
+    color: #41464b;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #64707b;
+}
+
+/*************************************************************************************
+
+        CONTENT BOX
+        
+*************************************************************************************/
+
+.content-box {
+    padding: 60px 0px;
+}
+
+.content-title h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+
+    margin: 0px 0px 30px 0px;
+}
+
+.content-title-white h3 {
+    color: #fff;
+}
+
+.content-title-underline {
+    width: 30px;
+    height: 3px;
+    margin: 0px auto 30px auto;
+
+    background-color: #34c6d3;
+}
+
+/*************************************************************************************
+
+        ANIMATIONS
+        
+*************************************************************************************/
+
+#home-cover,
+#home-heading,
+#home-button {
+    animation-duration: 0.5s;
+}
+
+#home-cover {
+    animation-delay: 0.1s;
+}
+
+#home-heading {
+    animation-delay: 0.5s;
+}
+
+#home-button {
+    animation-delay: 1.0s;
+}
+
+/*************************************************************************************
+
+        PARALLAX
+        
+*************************************************************************************/
+
+.bg-parallax {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*************************************************************************************
+
+        BUTTONS
+        
+*************************************************************************************/
+
+.button-general {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0;
+
+    padding: 12px 26px 12px 26px;
+
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.button-white {
+    border-color: #fff;
+    color: #fff;
+}
+
+.button-white:hover,
+.button-white:focus {
+    background-color: #fff;
+    color: #41464b;
+}
+
+.button-blue {
+    border-color: #34c6d3;
+    color: #34c6d3;
+}
+
+.button-blue:hover,
+.button-blue:focus {
+    background-color: #34c6d3;
+    color: #fff;
+}
+
+/*************************************************************************************
+
+        HOME SECTION
+        
+*************************************************************************************/
+
+#home {
+    height: 100%;
+}
+
+#home-cover {
+    height: 100%;
+    background-image: url('../media/images/bg-home.jpg');
+}
+
+#home-content-box {
+    width: 100%;
+    height: 100%;
+
+    display: table;
+}
+
+#home-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+#home-heading h3 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+
+    margin: 20px 0px 20px 0px;
+}
+
+/*************************************************************************************
+
+        SERVICES SECTION
+        
+*************************************************************************************/
+
+.service-item {
+    padding: 20px 0px 20px 0px;
+    margin: 0px 0px 20px 0px;
+
+    cursor: pointer;
+}
+
+.service-item-icon {
+    width: 75px;
+    height: 75px;
+
+    float: left;
+    padding: 15px;
+    margin-right: 25px;
+
+    text-align: center;
+    color: #34c6d3;
+}
+
+.service-item:hover .service-item-icon {
+    background-color: #34c6d3;
+    color: #fff;
+}
+
+.service-item-title h3 {
+    font-size: 30px;
+    font-weight: 400px;
+
+    margin: 0px 0px 10px 0px;
+}
+
+
+.service-item-desc p {
+    margin: 0;
+    padding: 0px 0px 0px 100px;
+}
+
+/*************************************************************************************
+
+        ABOUT SECTION
+        
+*************************************************************************************/
+
+#about-content-box {
+    float: left;
+    height: 700px;
+}
+
+#about-content-box-outer {
+    widows: 100%;
+    height: 100%;
+    display: table;
+}
+
+#about-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#about .content-title h3 {
+    text-align: left;
+}
+
+#about .content-title-underline {
+    margin: 0px 0px 30px 0px;
+}
+
+#about-desc p {
+    margin: 0px 0px 30px 0px;
+}
+
+#about-bg-diagonal {
+    width: 60%;
+    height: 700px;
+    float: right;
+
+    border-left: 200px solid #fff;
+    border-top: 700px solid transparent;
+
+    background-image: url('../media/images/bg-about.jpg');
+}
+
+
+/*************************************************************************************
+
+        WORK SECTION
+        
+*************************************************************************************/
+
+.row.no-gutters [class*=col-] {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.img-wrapper {
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    transition: transform 0.5s ease;
+}
+
+.img-wrapper img:hover {
+    transform: scale(1.5);
+    cursor: zoom-in;
+}
+
+/*************************************************************************************
+
+        TEAM SECTION
+        
+*************************************************************************************/
+
+.owl-theme .owl-dots .owl-dot span {
+    background: #34c6d3;
+}
+
+.team-member {
+    margin: 0px 15px;
+}
+
+.team-member-info {
+    padding: 10px 0px 30px 0px;
+}
+
+h4.team-member-name {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-top: 20px;
+}
+
+h4.team-member-designation {
+    font-size: 15px;
+    font-weight: 700;
+    font-style: italic;
+    color: #34c6d3;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+/*************************************************************************************
+
+        TSTIMONIALS SECTION
+        
+*************************************************************************************/
+
+#testimonials-cover {
+    background-image: url('../media/images/bg-testimonials.jpg');
+}
+
+#testimonials .content-box {
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+#customers-testimonials {
+    padding: 50px 0;
+}
+
+.testimonial img {
+    max-width: 120px;
+    margin: 0 auto 0 auto;
+}
+
+.testimonial blockquote {
+    position: relative;
+    border: 0;
+    padding: 6px 150px;
+
+    font-family: Georgia, sans-serif;
+    font-style: italic;
+    color: #fff;
+}
+
+.testimonial blockquote p {
+    color: #fff;
+}
+
+.testimonial blockquote::before,
+.testimonial blockquote::after {
+    position: absolute;
+
+    font-size: 80px;
+    font-style: normal;
+    width: 30px;
+    height: 30px;
+
+}
+
+.testimonial blockquote::before {
+    content: '\201C';
+    top: -35px;
+    left: 100px;
+}
+
+.testimonial blockquote::after {
+    content: '\201D';
+    bottom: 0;
+    right: 100px;
+}
+
+.testimonial-author p {
+    color: #fff;
+}
+
+.testimonial-author p strong {
+    display: block;
+}
+
+/*************************************************************************************
+
+        PRICING SECTION
+        
+*************************************************************************************/
+
+.pricing-box {
+    border: 3px solid #34c6d3;
+    padding: 50px 0;
+    margin: 40px 0;
+}
+
+h4.pricing-title {
+    display: inline-block;
+    padding: 7px 15px;
+    margin: 0 0 30px 0;
+
+    background-color: #34c6d3;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    color: #fff;
+}
+
+h3.pricing-value {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+h3.pricing-value sup {
+    font-size: 28px;
+    font-weight: normal;
+    vertical-align: super;
+}
+
+ul.pricing-spec {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0px 60px 0px;
+}
+
+ul.pricing-spec li p {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.pricing-box-lg {
+    padding: 90px 0px;
+    margin: 0;
+
+    background-color: #34c6d3;
+}
+
+.pricing-box-lg h4.pricing-title {
+    color: #34c6d3;
+    background-color: #fff;
+}
+
+.pricing-box-lg ul.pricing-spec li p {
+    color: #fff;
+}
+
+/*************************************************************************************
+
+        STATS SECTION
+        
+*************************************************************************************/
+
+#stats-cover {
+    background-image: url('../media/images/bg-stats.jpg');
+}
+
+#stats .content-box {
+    background-color: rgb(0, 0, 0, .7);
+}
+
+.stats-item {
+    padding: 100px 0;
+}
+
+.stats-item i {
+    color: #34c6d3;
+}
+
+.stats-item h2 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+
+    margin-top: 15px;
+    margin-bottom: 1px;
+}
+
+.stats-item p {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300px;
+    margin-top: 0;
+}
+
+/*************************************************************************************
+
+        CLIENTS SECTION
+        
+*************************************************************************************/
+
+.client {
+    padding: 40px 0;
+}
+
+/*************************************************************************************
+
+        CONTACT SECTION
+        
+*************************************************************************************/
+
+footer {
+    background-color: #41464b;
+    padding-top: 30px;
+    border-top: 5px solid rgba(0, 0, 0, 0.1);
+}
+
+#contact-left h3 {
+    color: #fff;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+#contact-left p {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+#contact-info {
+    background-image: url('../media/images/world-map.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#contact-info address {
+    color: #fff;
+}
+
+#contact-info address strong,
+#phone-fax-email strong {
+    letter-spacing: 1px;
+}
+
+#contact-right {}
+
+form .form-control {
+    background: transparent;
+    border-radius: 0;
+    border-color: #fff;
+    font-size: 17px;
+    font-weight: 300;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+
+/*************************************************************************************
+
+        FOOTER SECTION
+        
+*************************************************************************************/
+
+#copyrights {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+#copyrights p {
+    margin: 0;
+    color: #fff;
+}
+
+#foter-menu {
+    float: left;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#footer-menu ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#footer-menu ul li {
+    display: inline-block;
+    color: #fff;
+}
+
+#footer-menu ul li a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#footer-menu ul li a:hover {
+    color: #34c6d3;
+}
+
+
+/*************************************************************************************
+
+        NAVBAR SECTION
+        
+*************************************************************************************/
+
+.navbar {
+    padding: 20px 0;
+    transition: all .5s ease-in-out;
+}
+
+.vesco-top-nav {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 7px 0;
+}
+
+.vesco-nav-wrapper {
+    padding: 0 85px;
+}
+
+.navbar-nav {
+    float: right;
+}
+
+.navbar-nav > li > a {
+    color: #fff !important;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+    color: #34c6d3 !important;
+    background-color: inherit;
+}
+
+.navbar-toggle {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: solid 1px #fff;
+    border-radius: 0;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+#vesco-menu.collapse {
+    max-height: none !important;
+}
+
+#vesco-menu ul.navbar-nav > li.active > a {
+    color: #34c6d3 !important;
+}
+
+#vesco-menu ul.navbar-nav > li.active:hover > a {
+    color: #ca2133 !important;
+}
+
+/*************************************************************************************
+
+        SOCIAL ICONS SECTION
+        
+*************************************************************************************/
+
+.social-list {
+    padding-left: 0px;
+}
+
+.social-list li {
+    list-style: none;
+    display: inline-block;
+
+    width: 32px;
+    height: 32px;
+
+    margin-right: 6px;
+    margin-top: 10px;
+}
+
+.icon-gray i {
+    color: #41464b;
+}
+
+.icon-white {
+    color: #fff;
+}
+
+.social-icon {}
+
+.social-icon i {
+    font-size: 17px;
+}
+
+.social-icon i:hover {
+    color: #34c6d3;
+}

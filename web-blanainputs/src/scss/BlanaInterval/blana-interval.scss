@@ -1,0 +1,19 @@
+.blana-interval {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .blana-numeric {
+        display: inline-block;
+        width: 40%;
+    }
+
+    &.blana-night {
+        .blana-hr-line {
+            width: 7%;
+            height: 1px;
+            background-color: $app-red;
+            margin: 0 auto;
+        }
+    }
+}

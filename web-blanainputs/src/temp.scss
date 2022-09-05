@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i');
+/*  font-family: 'Lato', sans-serif;    */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,500i,600,700');
+/*  font-family: 'Montserrat', sans-serif;  */
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+/*  font-family: 'Monoton', cursive;    */
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+/*  font-family: 'Audiowide', cursive;  */
+@import url('https://fonts.googleapis.com/css?family=Iceland');
+/*  font-family: 'Iceland', cursive;    */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 1em;
+    line-height: 1;
+    background-color: #222222;
+}
+
+.container {
+    padding-top: 90px;
+    width: 460px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.temp {
+    margin-bottom: 60px;
+}
+
+@import "./scss/general.scss";

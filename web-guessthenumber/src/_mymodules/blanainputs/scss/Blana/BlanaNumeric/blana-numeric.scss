@@ -1,0 +1,73 @@
+.blana-numeric {
+
+    input[type=text] {
+        width: 100%;
+        padding: 9px 12px;
+        outline: none;
+        border-radius: 120px;
+        border-style: solid;
+        border-width: 1px;
+    }
+
+    label {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+        margin-left: 16px;
+        padding: 0 6px;
+        transition: ease .4s;
+    }
+
+    &.blana-has-focus {
+        label {
+            margin-left: calc(100% - 16px);
+            transform: translate(-100%, -50%);
+        }
+    }
+
+    &.blana-has-value {
+        label {
+            margin-left: calc(100% - 16px);
+            transform: translate(-100%, -50%);
+        }
+    }
+}
+
+.blana-numeric {
+    &.blana-night {
+        input[type=text] {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8em;
+            color: $app-red;
+            background-color: $app-black;
+            border-color: $app-red;
+        }
+
+        label {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.4em;
+            color: $app-blue;
+            background-color: $app-black;
+        }
+
+        &.blana-has-focus {
+            input[type=text] {
+                color: $app-blue;
+                border-color: $app-blue;
+            }
+    
+            label {
+                color: $app-red;
+            }
+        }
+
+        &.blana-has-value {
+            input[type=text] {
+            }
+    
+            label {
+            }
+        }
+    }
+}

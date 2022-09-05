@@ -1,0 +1,205 @@
+/* neon text:  https://codepen.io/FelixRilling/pen/qzfoc   */
+
+.logo {
+    display: inline-block;
+    padding: 12px;
+
+    h1 {
+        position: relative;
+        z-index: 1000;
+        font-size: 4.6em;
+        letter-spacing: -2px;
+        color: #fff;
+        cursor: pointer;
+
+        animation: UnShiftWhole 1s ease normal;
+
+        span {
+            position: relative;
+            display: inline-block;
+
+            &:first-of-type {
+                z-index: 1010;
+                font-family: 'Iceland', cursive;
+                color: #228DFF;
+                animation: UnShiftRight 1s ease normal forwards, NeonBlue 1.5s ease-in-out infinite alternate;
+            }
+
+            &:nth-of-type(2) {
+                position: relative;
+                margin-left: -16px;
+                margin-right: -14px;
+                z-index: 1020;
+                font-family: 'Audiowide', cursive;
+                font-size: 1.6rem;
+                text-transform: uppercase;
+                color: #FF1177;
+                animation: UnDissapear 1s ease normal, NeonRed 1.5s ease-in-out infinite alternate;
+            }
+
+            &:last-of-type {
+                z-index: 1010;
+                font-family: 'Iceland', cursive;
+                color: #228DFF;
+                animation: UnShiftLeft 1s ease normal forwards, NeonBlue 1.5s ease-in-out infinite alternate;
+            }
+
+        }
+
+        &:hover {
+            animation: ShiftWhole 1s ease normal;
+
+            span {
+                &:first-of-type {
+                    animation: ShiftRight 1s ease normal forwards, NeonRed 1.5s ease-in-out infinite alternate;
+                        
+                }
+
+                &:nth-of-type(2) {
+                    animation: Dissapear 1s ease normal forwards, NeonBlue 1.5s ease-in-out infinite alternate;
+                }
+
+                &:last-of-type {
+                    animation: ShiftLeft 1s ease normal forwards, NeonRed 1.5s ease-in-out infinite alternate;
+                }
+            }
+        }
+    }
+}
+
+@keyframes NeonBlue {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    }
+}
+
+@keyframes NeonRed {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+    }
+}
+
+@keyframes ShiftRight {
+    from {
+        margin-right: 0px;
+    }
+
+    50% {
+        margin-right: 12px;
+    }
+
+    to {
+        margin-right: -10px;
+        color: #FF1177;
+    }
+}
+
+@keyframes UnShiftRight {
+    from {
+        margin-right: -10px;
+    }
+
+    50% {
+        margin-right: 12px;
+    }
+
+    to {
+        margin-right: 0px;
+    }
+}
+
+@keyframes ShiftLeft {
+    from {
+        margin-left: 0px;
+    }
+
+    50% {
+        margin-left: 12px;
+    }
+
+    to {
+        margin-left: -10px;
+        color: #FF1177;
+    }
+}
+
+@keyframes UnShiftLeft {
+    from {
+        margin-left: -10px;
+    }
+
+    50% {
+        margin-left: 12px;
+    }
+
+    to {
+        margin-left: 0px;
+    }
+}
+
+@keyframes ShiftWhole {
+    from {
+        margin-left: 0px;
+    }
+
+    50% {
+        margin-left: 12px;
+    }
+
+    to {
+       margin-left: 0px; 
+    }
+}
+
+@keyframes UnShiftWhole {
+    from {
+        margin-left: 0px;
+    }
+
+    50% {
+        margin-left: 12px;
+    }
+
+    to {
+       margin-left: 0px; 
+    }
+}
+
+@keyframes Dissapear {
+    from {
+        display: inherit;
+        z-index: 1020;
+    }
+
+    50%{
+        z-index: 1010;
+        color: #228DFF;
+    }
+
+    to {
+        display: none;
+        z-index: 1005;
+    }
+}
+
+@keyframes UnDissapear {
+    from {
+        display: none;
+        z-index: 1005;
+    }
+
+    50%{
+        z-index: 1010;
+    }
+
+    to {
+        display: inherit;
+        z-index: 1020;
+    }
+}

@@ -1,0 +1,128 @@
+$mask-color: #1B1B1B;
+
+#app {
+
+    &.rules__container {
+
+        .aow-cover {
+            background-image: url("./../../../assets/rules-cover.jpg");
+
+            .aow-mask {
+                background-color: $mask-color;
+            }
+        }
+    }
+
+    .back-btn {
+        position: fixed;
+
+        top: 30px; left: 30px;
+
+        @media (max-width: 1300px) {
+            
+            & {
+                
+                font-size: .6rem;
+
+                top: 30px; left: 10px;
+
+                transform: rotate(-90deg);
+            }
+        }
+
+    }
+
+    width: 100% !important;
+
+    color: #ffffff;
+
+    font-size: 1.4rem;
+
+    h1 {
+        font-size: 1.8em;;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    ul, ol {
+        li {
+            font-size: .8em;
+        }
+    }
+
+    ul {
+        
+        li {
+            list-style: circle;
+        }
+    }
+
+    ol {
+        li {
+            list-style: inherit;
+        }
+    }
+
+    .preview {
+        border-radius: 1em;
+        border: 3px solid #ffffff;
+
+        img {
+            border-radius: 1em;
+        }
+    }
+
+    .indented {
+        p {
+            text-indent: 1em;
+            margin-bottom: 1rem;
+
+            &::first-letter {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .dice-presentation {
+        
+        margin-bottom: 2rem;
+
+        .dice-presentation__list {
+            margin-left: 5rem;
+            margin-bottom: 2rem;
+        }
+
+        .dice-presentation__images {
+
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 6rem;
+
+            .dice-presentation__image {
+
+                width: 128px;
+                height: 128px;
+                border-radius: 1rem;
+                background-color: #ffffff;
+                border: 2px solid #1B1B1B;
+                opacity: .8;
+
+                img {
+                    border-radius: 1rem;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &:not(:last-of-type) {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}

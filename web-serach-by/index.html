@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="books.js"></script>
+    <script src="createui.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Search using the inputs below!</h1>
+        </div>
+        <div class="content">
+            <div class="controls-container">
+                <label for="publisher">Publisher:</label>
+                <select name="publisher" id="publisher">
+                    <option value=""></option>
+                </select>
+                <label for="author">Author:</label>
+                <select name="author" id="author">
+                    <option value=""></option>
+                </select>
+                <label for="title">Title: </label>
+                <input type="text" name="title" id="title">
+                <button id="search">Search</button>
+            </div>
+            <div id="tags-container">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

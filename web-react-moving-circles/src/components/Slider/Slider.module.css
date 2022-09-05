@@ -1,0 +1,13 @@
+.Slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Slider label {
+    margin-right: .3rem;
+}
+
+.Slider input {
+    cursor: pointer;
+}

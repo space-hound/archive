@@ -1,0 +1,145 @@
+/*===================================================================
+    SELECTOR ROOT
+===================================================================*/
+
+.aow-selectbox {
+    --aow-sel-bg: #214FC6;
+    --aow-sel-border: #1B1B1B;
+    --aow-sel-border-hover: #1B1B1B;
+
+    --aow-sel-arrow: #FEFEFE;
+    --aow-sel-hover: #1B1B1B;
+    --aow-sel-color: #FEFEFE;
+
+    --aow-arrow-size: 2.2rem;
+    --aow-arrow-width: 40px;
+    
+
+    --aow-val-size: 2rem;
+    --aow-val-pad: .2rem 0rem .2rem 1.4rem;
+}
+
+.aow-selectbox {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+
+    overflow: hidden;
+
+    border-radius: 1rem;
+    border: solid 1px var(--aow-sel-border);
+    background-color: var(--aow-sel-bg);
+    
+    transition: all 250ms ease;
+}
+
+.aow-selectbox * {
+    box-sizing: border-box;
+}
+
+.aow-selectbox:hover {
+    border-color: var(--aow-sel-border-hover);
+}
+
+/*===================================================================
+    SELECTOR OPTIONS CONTAINER
+===================================================================*/
+
+.aow-selectbox .aow-select {
+    position: relative;
+    /* top: 0; left: 0; */
+}
+
+/*===================================================================
+    SELECTOR OPTIONS
+===================================================================*/
+
+.aow-selectbox .aow-select div {
+    position: absolute;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    
+    
+    padding: var(--aow-val-pad);
+    
+    font-size: var(--aow-val-size);
+    color: var(--aow-sel-color);
+    white-space: nowrap;
+
+    background-color: var(--aow-sel-bg);
+
+    transition: all 300ms ease;
+
+    user-select: none;
+}
+
+/*===================================================================
+    SELECTOR ARROWS
+===================================================================*/
+
+.aow-selectbox .aow-prev,
+.aow-selectbox .aow-next {
+    position: absolute;
+    right: 10px;
+    z-index: 1001;
+
+    width: var(--aow-arrow-width);
+    height: 50%;
+
+    overflow: hidden;
+
+    background-color: var(--aow-sel-bg);
+
+    cursor: pointer;
+}
+
+.aow-selectbox .aow-prev i,
+.aow-selectbox .aow-next i {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: block;
+
+    font-size: var(--aow-arrow-size);
+    color: var(--aow-sel-arrow);
+
+    transition: color 150ms ease;
+}
+
+/*===================================================================
+    SELECTORS ARROW UP
+===================================================================*/
+
+.aow-selectbox .aow-prev {
+    top: 0;
+}
+
+.aow-selectbox .aow-prev i {
+    bottom: 45%;
+    transform: translate(-50%, 50%);
+}
+
+/*===================================================================
+    SELECTORS ARROW DOWN
+===================================================================*/
+
+.aow-selectbox .aow-next {
+    bottom: 0;
+}
+
+.aow-selectbox .aow-next i {
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+/*===================================================================
+    SELECTORS ARROWS HOVER
+===================================================================*/
+
+.aow-selectbox .aow-prev:hover i,
+.aow-selectbox .aow-next:hover i {
+    color: var(--aow-sel-hover);
+}

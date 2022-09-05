@@ -1,0 +1,37 @@
+@import './utilities/reset';
+@import './utilities/variables';
+@import './utilities/abstracts';
+
+
+body {
+    font-family: $app-font;
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: $color-light-black;
+    background-color: $color-white;
+}
+
+.site-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.title {
+    @extend %title;
+}
+
+.sub-title {
+    @extend %sub-title;
+}
+
+.logo {
+    @extend %logo;
+}
+
+
+@import './components/inputs';
+@import './components/header';
+@import './components/menu';
+@import './components/content';
+@import './components/footer';
+@import './mcgive/mcgive.scss';

@@ -1,0 +1,14 @@
+@import "./abstracts/reset";
+@import "./abstracts/variables";
+@import "./abstracts/utils";
+
+#app {
+
+    &.app-wrapper {
+        position: relative;
+        width: 100vw;
+        max-width: 100vw;
+        min-height: 100vh;
+    }
+    
+}

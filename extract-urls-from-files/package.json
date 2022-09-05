@@ -1,0 +1,14 @@
+{
+  "name": "extract-urls",
+  "version": "1.0.0",
+  "description": "extract urls from files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Borz Alexandru Mihai",
+  "license": "ISC",
+  "dependencies": {
+    "get-urls": "^9.1.0"
+  }
+}

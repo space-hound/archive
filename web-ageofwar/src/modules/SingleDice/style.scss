@@ -1,0 +1,36 @@
+$aow-dice-size: 48px;
+
+.aow-dice {
+
+    border-radius: .5rem;
+    border: 1px solid #000000;
+
+    background-color: #ffffff;
+
+    .aow-dice__dice {
+
+        position: relative;
+
+        box-sizing: content-box;
+        padding: .3rem;
+
+        width: $aow-dice-size;
+        height: $aow-dice-size;
+
+        overflow: hidden;
+
+        .aow-dice__face {            
+            position: absolute;
+            top: 0px; left: 50%;
+            transform: translateX(-50%);
+
+            img {
+                box-sizing: content-box;
+                padding: .3rem;
+                
+                width: $aow-dice-size;
+                height: $aow-dice-size;
+            }
+        }
+    }
+}

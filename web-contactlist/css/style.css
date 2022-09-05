@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+/*
+    font-family: 'Open Sans', sans-serif;
+
+    #black: #1B1B1B;
+    #red: #FD0E35;
+    #blue: #50BFE6;
+
+*/
+
+/*========================================================================================
+
+==========================================================================================*/
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #1b1b1b;
+}
+
+/*========================================================================================
+
+==========================================================================================*/
+
+#contacts-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 90px 180px;
+}
+
+#contacts-container .title {
+    display: block;
+    width: 100%;
+    margin-bottom: 90px;
+    text-align: center;
+}
+
+#contacts-container .title h1 {
+    font-weight: 600;
+    font-size: 2.6rem;
+}
+
+/*========================================================================================
+
+==========================================================================================*/
+
+#contacts-content {
+    width: 100%;
+    display: block;
+}
+
+/* select direct children only */
+#contacts-content .contacts-header > div,
+#contacts-content .contacts-contacts .contact-item > div {
+    display: inline-block;
+    height: 50px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #FD0E35;
+    
+}
+
+#contacts-content .contacts-header > div:not(:last-child),
+#contacts-content .contacts-contacts .contact-item > div:not(:last-child)  {
+    width: calc( (100% - 30px) * .3 );
+    padding: 10px 30px;
+}
+
+#contacts-content .contacts-header > div:last-child,
+#contacts-content .contacts-contacts .contact-item > div:last-child {
+    width: calc( (100% - 30px) * .1);
+    vertical-align: bottom;
+}
+
+#contacts-content .contacts-header > div:last-child button,
+#contacts-content .contacts-contacts .contact-item > div:last-child button {
+    display: block; 
+    outline: none;
+    border-radius: 3px;
+    background-color: #FD0E35;
+    font-size: 22px;
+    color: #ffffff;
+    cursor: pointer;
+    line-height: 50px;
+    transition: all .15s ease-out;
+}
+
+
+#contacts-content .contacts-header > div:last-child button {
+    width: 100%;
+    height: 50px;
+
+}
+
+#contacts-content .contacts-contacts .contact-item > div:last-child button {
+    display: inline-block;
+    font-size: 18px;
+    width: 48%;
+    height: 50px;
+}
+
+#contacts-content .contacts-header > div:last-child button:hover,
+#contacts-content .contacts-contacts .contact-item > div button:hover {
+    background-color: #ACACE6;
+}
+
+#contacts-content .contacts-contacts {
+    margin-top: 5px;
+}
+
+#contacts-content .contacts-contacts .contact-item {
+    margin-bottom: 5px;
+}
+
+#modal-container {
+    display: none;
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    height: 70vh;
+    background-color: white;
+    border: solid 3px black;
+    border-radius: 16px;
+}
+
+#modal-container .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#modal-container .modal-content > div {
+    text-align: center;
+    width: 50%;
+}
+
+#modal-container .modal-content input {
+    width: 100%;
+    font-size: 22px;
+    border: solid 1px black;
+    border-radius: 9px;
+    padding: 6px 12px;
+    margin-bottom: 30px;
+}
+
+#modal-container .modal-content button {
+    cursor: pointer;
+    width: 180px;
+    padding: 12px 0;
+    font-size: 18px;
+    color: white;
+    border: soldi 1px gray;
+    border-radius: 9px;
+}
+
+#modal-container .modal-content button.modal-save {
+    background-color: #50BFE6;
+    margin-right: 60px;
+}
+
+#modal-container .modal-content button.modal-discard {
+    background-color: #FD0E35;
+}
+
+#modal-container .modal-content button:hover {
+    background-color: goldenrod;
+}
+

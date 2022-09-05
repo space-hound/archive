@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guess The Game</title>    
+</head>
+
+<body class="body-bg">
+
+    <div class="header">
+        <div class="logo">
+            <h1><span>guess</span> <span>the</span> <span>number</span></h1>
+        </div>
+
+        <div class="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="https://github.com/space-hound/web-guessthenumber" class="nav-link">code</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link disabled">2+2=4</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#" class="nav-link disabled">quick math</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="main">
+        <div id="guess-the-number">
+            <div id="menu-container" class="">
+                <form action="#" autocomplete="off" onsubmit="event.preventDefault();">
+                    <div class="blana blana-text blana-night opt-nickname">
+                        <input type="text" id="opt-nickname">
+                        <label for="opt-nickname">nickname</label>
+                    </div>
+
+                    <div class="blana blana-select blana-night opt-difficulty">
+                        <select id="opt-difficulty">
+                            <option value="inf">Easy - &infin; tries</option>
+                            <option value="12">Medium - 12 tries</option>
+                            <option value="6">Hard - 6 tries</option>
+                        </select>
+        
+                        <label for="opt-difficulty">difficulty</label>
+        
+                        <div class="blana-select-status">
+                            <span class="current">1</span>/<span class="count">3</span>
+                        </div>
+                    </div>
+
+                    <div class="blana blana-interval blana-night opt-interval">
+                        <div class="blana blana-numeric blana-night">
+                            <input type="text" id="opt-interval-min">
+                            <label for="opt-interval-min">min</label>
+                        </div>
+        
+                        <div class="blana-hr-line"></div>
+        
+                        <div class="blana blana-numeric blana-night">
+                            <input type="text" id="opt-interval-max">
+                            <label for="opt-interval-max">max</label>
+                        </div>
+                    </div>
+
+                    <div class="blana blana-submit blana-night opt-startgame">
+                        <input type="submit" value="Start Guessing">
+                    </div>
+                </form>
+            </div>
+            <div id="game-container">
+                <form action="#" autocomplete="off" onsubmit="event.preventDefault();">
+                    <div class="guess-zone">
+                        <div class="guess-input">
+                            <div class="blana blana-text blana-night game-input">
+                                <input type="text" id="opt-guess">
+                                <label for="opt-guess">a&nbsp;number?</label>
+                            </div>
+                        </div>
+                        <div class="guess-submit">
+                            <div class="blana blana-submit blana-night blana-blue">
+                                <input type="submit" value="Try it!">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result-zone">
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

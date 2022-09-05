@@ -1,0 +1,144 @@
+$mask-color: #1B1B1B;
+$menu-color: #FFFFFF;
+$menu-hover: #FDFF00;
+$menu-disabled: #A6A6A6;
+$menu-border: solid 2px #FDFF00;
+
+#app {
+
+    &.main-menu__container {
+
+        .aow-cover {
+            background-image: url("./../../../assets/menu-cover.jpg");
+
+            .aow-mask {
+                background-color: $mask-color;
+            }
+        }
+    }
+}
+
+#app {
+
+    &.main-menu__container {
+
+        .main-menu__nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100vh;
+
+            .nav-item {
+                position: relative;
+
+                &:not(:last-of-type) {
+                    margin-bottom: .8rem;
+                }
+
+                .nav-link {
+                    display: block;
+                    padding: .8rem 2rem;
+
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: 1.6rem;
+                    color: $menu-color;
+                }
+
+                &.disabled {
+                    .nav-link {
+                        color: $menu-disabled;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#app {
+
+    &.main-menu__container {
+
+        .main-menu__nav {
+
+            .nav-item {
+
+                &:before,
+                &:after,
+                .nav-link:before,
+                .nav-link:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                }
+            }
+
+            /* MAKE ALL LINKS BLURRY ON <ul> HOVER */
+            .nav:hover .nav-link {
+                filter: blur(1px);
+            }
+
+            /* MAKE HOVERED LINK UNBLURY */
+            .nav:hover .nav-item:not(.disabled):hover .nav-link {
+                filter: blur(0px);
+            }
+
+            /* BORDERS ON Y AXIS TRANSITION DURATION */
+            .nav .nav-item:before,
+            .nav .nav-item:after {
+                transition: 400ms ease;
+            }
+
+            /* BORDERS ON X AXIS TRANSITION DURATION */
+            .nav-item .nav-link:before,
+            .nav-item .nav-link:after {
+                transition: 200ms ease;
+            }
+
+            /* LEFT BORDER */
+            .nav .nav-item:hover:before {
+                height: 100%;
+                bottom: 0;
+                left: 0;
+                border-left: $menu-border;
+            }
+
+            /* RIGHT BORDER */
+            .nav .nav-item:hover:after {
+                height: 100%;
+                top: 0;
+                right: 0;
+                border-right: $menu-border;
+            }
+
+            /* TOP BORDER */
+            .nav-item:hover .nav-link:before {
+                width: 100%;
+                top: 0;
+                left: 0;
+                border-top: $menu-border;
+            }
+
+            /* BOTTOM BORDER */
+            .nav-item:hover .nav-link:after {
+                width: 100%;
+                bottom: 0;
+                right: 0;
+                border-bottom: $menu-border;
+            }
+
+            /* NO EFFECT ON DISABLED LINK */
+            .nav .nav-item.disabled:hover:before,
+            .nav .nav-item.disabled:hover:after,
+            .nav-item.disabled:hover .nav-link:before,
+            .nav-item.disabled:hover .nav-link:after {
+                width: 0;
+                height: 0;
+            }
+        }
+    }
+}

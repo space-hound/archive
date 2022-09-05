@@ -1,0 +1,89 @@
+header{
+	display: flex;
+	flex-flow: column;
+}
+
+header .header-background{
+	width: 100%;
+	height: 60vh;
+
+	background-image: url("../resources/header.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	border-bottom: solid 1px #000;
+	transition: ease 0.3s;
+}
+
+header nav{
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 100%;
+	height: 90px;
+
+	background-color: #212121;
+	
+}
+
+header nav ul{
+	display: flex;
+	flex-flow: row;
+	line-height: 85px;
+}
+
+header nav ul li a{
+	display: inline-block;
+	padding: 0 25px;
+	margin-left: 45px;
+
+	font-family: 'Cuprum', sans-serif;
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: -2px;
+	color: #ffc107;
+	opacity: 0.5;
+
+	transition: ease 0.5s;
+}
+
+header nav ul li .selected{
+	opacity: 1;
+	border-bottom: solid 5px #ffc107;
+	transition: ease 0.5s;
+}
+
+header nav ul li a:hover{
+	opacity: 1;
+	border-bottom: solid 5px #ffc107;
+	transition: ease 0.5s;
+}
+
+header nav .header-logo{
+	font-family: 'Arima Madurai', cursive;
+	text-transform: lowercase;
+	letter-spacing: -4px;
+	font-size: 45px;
+	font-weight: 900;
+	color: #ffc107;
+
+	margin-right: 60px;
+	line-height: 0.5;
+	padding: 1px 25px 0px 25px;
+	border-style: solid none;
+	border-color: #ffc107;
+	border-width: 2px;
+
+	transition: ease 0.5s;
+}
+
+header nav .header-logo:hover{
+
+	line-height: 0.8;
+	padding-top: 9px;
+
+	transition: ease 0.5s;
+}

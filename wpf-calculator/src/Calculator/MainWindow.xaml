@@ -1,0 +1,96 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        xmlns:custom="clr-namespace:Calculator.Customs"
+        mc:Ignorable="d"
+        Title="Calculator" Height="500" Width="800" Background="#bdbdbd"
+        MinHeight="450" MinWidth="450" MaxHeight="800" MaxWidth="1200">
+
+    <Window.CommandBindings>
+        <CommandBinding Command="Copy"
+            CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed"/>
+    </Window.CommandBindings>
+    
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Visibility="Collapsed" Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Left">
+            <ToolBar Width="auto">
+                <Button Command="Copy"
+                    Content="Copy" 
+                    Margin="0,4" Width="60"
+                    Cursor="Hand"/>
+            </ToolBar>
+        </StackPanel>
+        
+        <DockPanel Grid.Row="1" Margin="0,0,0,20">
+            <TextBox Name="Screen">
+                
+            </TextBox>
+        </DockPanel>
+
+        <Grid Grid.Row="2" custom:CalcButton.Click="CalcButton_Click">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Margin="0,0,9,0" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <custom:CalcButton Action="Nine" Grid.Column="0" Grid.Row="0"/>
+                <custom:CalcButton Action="Eight" Grid.Column="1" Grid.Row="0"/>
+                <custom:CalcButton Action="Seven" Grid.Column="2" Grid.Row="0"/>
+                <custom:CalcButton Action="Six" Grid.Column="0" Grid.Row="1"/>
+                <custom:CalcButton Action="Five" Grid.Column="1" Grid.Row="1"/>
+                <custom:CalcButton Action="For" Grid.Column="2" Grid.Row="1"/>
+                <custom:CalcButton Action="Three" Grid.Column="0" Grid.Row="2"/>
+                <custom:CalcButton Action="Two" Grid.Column="1" Grid.Row="2"/>
+                <custom:CalcButton Action="One" Grid.Column="2" Grid.Row="2"/>
+                <custom:CalcButton Action="Del" Grid.Column="0" Grid.Row="3"/>
+                <custom:CalcButton Action="Zero" Grid.Column="1" Grid.Row="4"/>
+                <custom:CalcButton Action="Equal" Grid.Column="2" Grid.Row="5"/>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.5*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <custom:CalcButton Action="C" Grid.Column="0" Grid.Row="0"/>
+                <custom:CalcButton Action="Div" Grid.Column="0" Grid.Row="1"/>
+                <custom:CalcButton Action="Multi" Grid.Column="0" Grid.Row="2"/>
+                <custom:CalcButton Action="Minus" Grid.Column="0" Grid.Row="3"/>
+                <custom:CalcButton Action="Plus" Grid.Column="0" Grid.Row="4"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
