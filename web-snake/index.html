@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snake Game</title>
+<link href="styles/snake.css" rel="stylesheet"></head>
+
+<body>
+
+    <div class="game__content game-wrapper">
+        <div class="game-ui destroy">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col">
+                        <div class="game__logo app-logo">
+                            <img src="assets/snake.png" alt="Snake Image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="game__player-name">
+                            <h1>Player's Name</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="hr-line first">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="game__current-score game__score">
+                            <h3>Current Score:</h3>
+                            <h3 class="score">-</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="hr-line second">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="row">
+                    <div class="col">
+                        <div class="game_log-title">
+                            <h3>Game History</h3>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="row">
+                    <div class="col flex-all-center">
+                        <div class="game__log">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="game__log-header game-log-table">
+                                            <div class="t1"><p>Round #</p></div>
+                                            <div class="t2"><p>Spawns #</p></div>
+                                            <div class="t3"><p>Food #</p></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container  game__log-body">
+                                        <div class="row">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="row">
+                    <div class="col">
+                        <div class="hr-line first">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="game__total-score game__score">
+                            <h3>Total Score:</h3>
+                            <h3 class="score">-</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="hr-line second">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="game__replay">
+                            <button class="">
+                                <span>Start!</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="game-game flex-all-center destroy">
+        </div>
+
+        <div class="game-info destroy">
+            <div class="info-col">
+                <h3>Use the <span>"UP", "DOWN", "RIGHT", "LEFT"</span> arrows to move around!</h3>
+                <h3>Avoid at all cost the intersection of your head with your tail!</h3>
+            </div>
+            <div class="info-col">
+                <h3 class="game-info__hardcore">Don't run into walls!</h3>
+                <h3>Press <span>"SPACE"</span> to pause!</h3>
+            </div>            
+        </div>
+    </div>
+
+    <div class="register__content register-wrapper flex-all-center">
+        <div class="register-container">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col">
+                        <div class="register__logo app-logo">
+                            <img src="assets/snake.png" alt="Snake Image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="register__title">
+                            <h1>Decide your snake!</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="register__name d-flex justify-content-center">
+                            <input type="text" tabindex="0" placeholder="Pick a name for your snake!" class="flat">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="hr-line first">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="register__head-color flex-all-center">
+                            <div class="colorpicker">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="register__body-color flex-all-center">
+                            <div class="colorpicker"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="register__food-color flex-all-center">
+                            <div class="colorpicker"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="hr-line second">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="register__game-mode">
+
+                            <div class="game-mode__title">
+                                <h3>Don't run now!</h3>
+                            </div>
+
+                            <div class="game-mode__option flex-all-center flex-col">
+                                <label class="custom-radio game-mode__normal success">
+                                    <input type="radio" name="mode" checked>
+                                    <div class="custom-radio__label">
+                                        Normal
+                                    </div>
+                                    <div class="custom-radio__mark">
+                                        <div></div>
+                                    </div>
+                                </label>
+
+                                <label class="custom-radio game-mode__hardcore danger">
+                                    <input type="radio" name="mode">
+                                    <div class="custom-radio__label">
+                                        Hardcore
+                                    </div>
+                                    <div class="custom-radio__mark">
+                                        <div></div>
+                                    </div>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="hr-line first">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="register__finish flex-all-center">
+                            <div class="button-wrapper">
+                                <div class="button-gradient">
+                                </div>
+                                <button>
+                                    <span>Play!</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="js/snake.js"></script></body>
+
+</html>

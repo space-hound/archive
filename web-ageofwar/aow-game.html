@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Age Of War - Game </title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+<link href="styles/vendor.css" rel="stylesheet"><link href="styles/common.css" rel="stylesheet"><link href="styles/aow-game.css" rel="stylesheet"></head>
+
+<body>
+    <div id="app" class="app-wrapper aow-game__container">
+
+        <div id="turn-tracker">
+            <div class="turns"> Turn: <span>3</span></div>
+        </div>
+
+        <div id="current-player">
+            <div class="player__icon">
+                <div class="icon-outer">
+                    <div class="icon-inner">
+                        <div class="icon-icon">
+                            <i class="fab fa-affiliatetheme"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="player__info">
+                <p class="player__name"> Scamander </p>
+                <p class="player__score">Score: <span>175</span></p>
+                <p class="player__turn"> Skip <span> this turn</span>!</p>
+            </div>
+        </div>
+
+        <div id="dices">
+            <button type="button" class="btn btn-outline-success"> ROLL DICES </button>
+            <div class="aow-dice__holder"></div>
+            <div class="dices__vr"></div>
+            <div class="aow-dice__holder"></div>
+            <div class="aow-dice__holder"></div>
+            <div class="aow-dice__holder"></div>
+            <div class="aow-dice__holder"></div>
+            <div class="aow-dice__holder"></div>
+            <div class="aow-dice__holder"></div>
+            <div class="aow-dice__holder"></div>
+        </div>
+    </div>
+<script type="text/javascript" src="js/vendor.js"></script><script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/aow-game.js"></script></body>
+
+</html>

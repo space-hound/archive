@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+	<meta charset="utf-8">
+	
+	<title>QuickHull Algorithm</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/convexHull.css">
+
+	<script src="../../p5/p5.js"></script>
+    <script src="../../p5/p5.dom.js"></script>
+    <script src="../../p5/p5.sound.js"></script>
+
+    <script src="../js/objects/colors.js"></script>
+    <script src="../js/objects/point.js"></script>
+    <script src="../js/utilities/utils.js"></script>
+    <script src="../js/algorithms/quick.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script type="text/javascript">
+    	window.onresize = function(){
+    		window.location.reload(true);
+    	}
+    </script>
+
+</head>
+<body>
+	<main id="parent">
+		<div id="controls">
+		<!--<div class="ui-class sub-controls-after">
+				<label class="ui-container"><p>Show UI !</p>
+				  	<input type="checkbox" name="ui" checked="checked" id="uiDisplay">
+				  	<span class="checkmark"></span>
+				</label>
+			</div>
+
+			<div class="log-class sub-controls-after">
+				<p>Logs</p>
+				<textarea class="main-textarea" readonly="true"></textarea>
+			</div> -->
+
+			<!--<div class="ui-class sub-controls-after">
+				<p>No. Points</p>
+				<input type="text" name="puncte" value="75" id="points">
+				<p>Viteza (ms)</p>
+				<input type="text" name="viteza" value="50" id="speed">
+			</div>-->
+
+			<!-- <div class="result-class sub-controls-after">
+				<p>Final Result</p>
+				<textarea class="main-textarea" readonly="true"></textarea>
+			</div> -->
+
+			<div class="do-button-class">
+				<input type="submit" name="reset" value="Reset" id="resetDisplay"
+				onclick="reloadPage()">
+			</div>
+
+			<div class="do-button-class">
+				<input type="submit" name="reset" value="Start" id="startDisplay" onclick="startQuick()">
+			</div>
+		</div>
+
+		/<!--<canvas id="display"></canvas>-->
+
+	</main>
+</body>
+</html>

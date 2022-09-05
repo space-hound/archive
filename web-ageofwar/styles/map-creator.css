@@ -1,0 +1,180 @@
+.map-creator__container {
+  user-select: none;
+  position: relative; }
+
+.map-creator__container .aow-cover {
+  background-image: url(../assets/game-cover.jpg); }
+
+.map-creator__container .aow-mask {
+  opacity: .1;
+  background-color: #1B1B1B; }
+
+#app .menu {
+  position: absolute;
+  top: .8rem;
+  left: 1rem; }
+  #app .menu i {
+    color: #4a4a4a;
+    font-size: 2rem;
+    transition: all ease 250ms; }
+  #app .menu:hover {
+    cursor: pointer; }
+    #app .menu:hover i {
+      color: #1B1B1B; }
+
+#map-menu .modal-body button:not(:last-of-type) {
+  margin-bottom: 1rem; }
+
+.aow-cover {
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.aow-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5; }
+
+#castle-selector {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #1b1b1b;
+  border-radius: 1rem;
+  border: solid 1px #fff; }
+
+#castle-selector.hidden {
+  display: none; }
+
+#castle-selector .castle-selector__row {
+  overflow-y: scroll;
+  height: calc( 6 * 64px + 6 * .6rem  + 6 * 1rem + 6 * 1px + 3 * 2rem + 1rem); }
+
+#castle-selector .castle-selector__row::-webkit-scrollbar {
+  display: none; }
+
+#castle-selector .castle-selector__castle {
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  border: solid 1px transparent;
+  transition: all ease 100ms;
+  cursor: pointer; }
+
+#castle-selector .castle-selector__col:first-child .castle-selector__castle {
+  margin-top: 1rem; }
+
+#castle-selector .castle-selector__castle:hover {
+  background-color: #fff;
+  border-color: #1b1b1b; }
+
+#castle-selector .castle-selector__castle.selected {
+  background-color: #fff;
+  border-color: #1b1b1b; }
+
+#castle-selector .castle-selector__castle img {
+  box-sizing: content-box;
+  width: 64px;
+  height: 64px;
+  padding: .6rem; }
+
+#castle-selector .castle-selector__delimiter {
+  border-top: solid 1px #fff;
+  margin: 1rem 0; }
+
+#app .castle-container {
+  cursor: pointer;
+  position: absolute; }
+
+#app .castle-container img {
+  width: 100%;
+  height: 100%; }
+
+#castle-editor {
+  position: absolute;
+  z-index: 1000;
+  bottom: 30px;
+  left: 30px;
+  width: 60vw;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: solid 1px #fff;
+  background-color: #1b1b1b; }
+
+#castle-editor .castle-editor-tabs {
+  position: relative; }
+
+#castle-editor .castle-editor-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  transform: translate(50%, -50%);
+  font-size: 1.6rem;
+  color: #fff;
+  cursor: pointer; }
+
+#castle-editor .castle-editor-close:hover {
+  color: #495057; }
+
+#castle-editor .castle-editor-tabs a {
+  color: #fff;
+  background-color: #495057;
+  border-color: #dee2e6 #dee2e6 #fff;
+  cursor: pointer; }
+
+#castle-editor .castle-editor-tabs a.active {
+  background-color: #1b1b1b;
+  color: #FFF; }
+
+#castle-img {
+  width: 96px;
+  height: 96px; }
+
+#castle-img img {
+  width: 100%;
+  height: 100%; }
+
+#castle-editor input[type=text] {
+  width: 90px;
+  font-size: 1.2rem; }
+
+#castle-editor #castle-editor__general,
+#castle-editor #castle-editor__weapons {
+  padding: 1rem; }
+
+#castle-editor #castle-editor__weapons input {
+  margin-right: 0;
+  width: 90px; }
+
+#castle-editor .custom-checkbox {
+  color: #FFF;
+  font-size: 1.4rem; }
+
+#castle-editor #castle-editor__weapons .input-group {
+  display: inline-flex;
+  width: auto; }
+
+#castle-editor #castle-editor__weapons .input-group span {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+#castle-editor #castle-editor__weapons img.stupid-fix {
+  visibility: hidden; }
+
+#castle-editor #castle-editor__weapons span.stupid-fix {
+  position: relative; }
+
+#castle-editor #castle-editor__weapons div.stupid-fix {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+

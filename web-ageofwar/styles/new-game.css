@@ -1,0 +1,719 @@
+/*===================================================================
+    IMPORTS
+===================================================================*/
+.aow-wrapper {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh; }
+
+.aow-cover {
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.aow-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5; }
+
+/*===================================================================
+    NEW GAME ROOT
+===================================================================*/
+#new-game {
+  --aow-new-mask: #1B1B1B;
+  --aow-new-return-color: #FF355E;
+  --aow-new-return-height: 90px;
+  --aow-new-color: #FEFEFA; }
+
+/*===================================================================
+    NEW GAME COVER
+===================================================================*/
+#new-game .new-game__cover {
+  background-image: url(../assets/new-cover.jpg); }
+
+#new-game .new-game__mask {
+  background-color: var(--aow-new-mask); }
+
+/*===================================================================
+    TO MAIN MENU CONTAINER
+===================================================================*/
+#new-game .new-game__return {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  width: 180px;
+  height: 90px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden; }
+
+#new-game .new-game__return i,
+#new-game .new-game__return span {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap; }
+
+#new-game .new-game__return i {
+  top: 50%;
+  left: 30%;
+  transform: translate(-30%, -50%);
+  font-size: 150%;
+  color: var(--aow-new-color);
+  transition: left 200ms 100ms ease; }
+
+#new-game .new-game__return:hover i {
+  left: -100%;
+  color: var(--aow-new-return-color); }
+
+#new-game .new-game__return span {
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--aow-new-return-color);
+  transition: top 200ms 100ms ease; }
+
+#new-game .new-game__return:hover span {
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+/*===================================================================
+    
+===================================================================*/
+.new-game__settings {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 90px 60px 30px 60px; }
+
+.new-game__settings .settings-row {
+  width: 100%;
+  display: flex; }
+
+.new-game__settings .settings__players,
+.new-game__settings .settings__gametype {
+  display: flex;
+  align-items: center; }
+
+.new-game__settings .settings__players h3,
+.new-game__settings .settings__gametype h3 {
+  margin: 0;
+  margin-right: 1rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #FEFEFA; }
+
+.new-game__settings .settings__players {
+  margin-left: 60px;
+  margin-right: 60px; }
+
+.finish__row {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center; }
+  .finish__row button {
+    border: 1px solid #000;
+    background-color: #214fc6;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #fff; }
+    .finish__row button:hover {
+      background-color: #1a3e9a;
+      color: #fff; }
+
+/*===================================================================
+    SELECTOR ROOT
+===================================================================*/
+.aow-selectbox {
+  --aow-sel-bg: #214FC6;
+  --aow-sel-border: #1B1B1B;
+  --aow-sel-border-hover: #1B1B1B;
+  --aow-sel-arrow: #FEFEFE;
+  --aow-sel-hover: #1B1B1B;
+  --aow-sel-color: #FEFEFE;
+  --aow-arrow-size: 2.2rem;
+  --aow-arrow-width: 40px;
+  --aow-val-size: 2rem;
+  --aow-val-pad: .2rem 0rem .2rem 1.4rem; }
+
+.aow-selectbox {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: solid 1px var(--aow-sel-border);
+  background-color: var(--aow-sel-bg);
+  transition: all 250ms ease; }
+
+.aow-selectbox * {
+  box-sizing: border-box; }
+
+.aow-selectbox:hover {
+  border-color: var(--aow-sel-border-hover); }
+
+/*===================================================================
+    SELECTOR OPTIONS CONTAINER
+===================================================================*/
+.aow-selectbox .aow-select {
+  position: relative;
+  /* top: 0; left: 0; */ }
+
+/*===================================================================
+    SELECTOR OPTIONS
+===================================================================*/
+.aow-selectbox .aow-select div {
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: var(--aow-val-pad);
+  font-size: var(--aow-val-size);
+  color: var(--aow-sel-color);
+  white-space: nowrap;
+  background-color: var(--aow-sel-bg);
+  transition: all 300ms ease;
+  user-select: none; }
+
+/*===================================================================
+    SELECTOR ARROWS
+===================================================================*/
+.aow-selectbox .aow-prev,
+.aow-selectbox .aow-next {
+  position: absolute;
+  right: 10px;
+  z-index: 1001;
+  width: var(--aow-arrow-width);
+  height: 50%;
+  overflow: hidden;
+  background-color: var(--aow-sel-bg);
+  cursor: pointer; }
+
+.aow-selectbox .aow-prev i,
+.aow-selectbox .aow-next i {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  font-size: var(--aow-arrow-size);
+  color: var(--aow-sel-arrow);
+  transition: color 150ms ease; }
+
+/*===================================================================
+    SELECTORS ARROW UP
+===================================================================*/
+.aow-selectbox .aow-prev {
+  top: 0; }
+
+.aow-selectbox .aow-prev i {
+  bottom: 45%;
+  transform: translate(-50%, 50%); }
+
+/*===================================================================
+    SELECTORS ARROW DOWN
+===================================================================*/
+.aow-selectbox .aow-next {
+  bottom: 0; }
+
+.aow-selectbox .aow-next i {
+  top: 30%;
+  transform: translate(-50%, -50%); }
+
+/*===================================================================
+    SELECTORS ARROWS HOVER
+===================================================================*/
+.aow-selectbox .aow-prev:hover i,
+.aow-selectbox .aow-next:hover i {
+  color: var(--aow-sel-hover); }
+
+/*===================================================================
+    ROOT
+===================================================================*/
+.aow-itemslist {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  padding: 2rem; }
+
+.aow-itemslist.disabled {
+  opacity: 0;
+  pointer-events: none; }
+
+.aow-itemlist__obstacle {
+  opacity: 1; }
+
+.aow-itemlist__obstacle.disabled {
+  opacity: 0;
+  pointer-events: none; }
+
+/*===================================================================
+    CONTAINER
+===================================================================*/
+.aow-itemslist .aow-itemslist__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+/*===================================================================
+    LIST
+===================================================================*/
+.aow-itemslist .aow-itemslist__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+/*===================================================================
+    LIST ITEM
+===================================================================*/
+.aow-itemslist__list .aow-itemslist__list-item {
+  cursor: pointer; }
+
+/*===================================================================
+    ICON LIST ITEM
+===================================================================*/
+/* ICON LIST ITEM */
+.aow-itemslist__list .aow-player__icon-item {
+  margin: .6rem .8rem;
+  border-radius: 1rem;
+  border: solid 1px transparent; }
+
+/* ICON LIST ITEM ICON */
+.aow-player__icon-item .aow-player__icon-item__icon {
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  padding: .4rem .6rem;
+  font-size: 3rem;
+  color: #fff; }
+
+/* ICON LIST SELECTED ITEM */
+.aow-itemslist__list .aow-player__icon-item.selected {
+  background-color: #fff;
+  border-color: #000; }
+
+/* ICON LIST SELECTED ITEM ICON */
+.aow-player__icon-item.selected .aow-player__icon-item__icon {
+  color: #000; }
+
+/* ICON LIST HOVER ITEM - NOT SELECTED */
+.aow-itemslist__list .aow-player__icon-item:not(.selected):hover {
+  border-color: #fff; }
+
+/* ICON LIST HOVER ITEM ICON - NOT SELECTED */
+.aow-player__icon-item:not(.selected):hover .aow-player__icon-item__icon {
+  color: #000; }
+
+/*===================================================================
+    COLOR LIST ITEM
+===================================================================*/
+/* ICON LIST ITEM */
+.aow-itemslist__list .aow-player__color-item {
+  margin: .6rem .8rem;
+  border-radius: 50%;
+  transition: all ease-in 200ms; }
+
+/* ICON LIST ITEM ICON */
+.aow-player__color-item .aow-player__color-item__color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .3rem; }
+
+.aow-player__color-item .aow-player__color-item__color div {
+  width: 64px;
+  height: 64px;
+  border-radius: .5rem;
+  border: solid 1px #000;
+  transition: all ease-out 200ms; }
+
+/* ICON LIST SELECTED ITEM */
+.aow-itemslist__list .aow-player__color-item.selected {
+  background-color: #000; }
+
+.aow-player__color-item.selected .aow-player__color-item__color div {
+  border-radius: 50%;
+  border: solid 1px #000; }
+
+/* ICON LIST SELECTED ITEM ICON */
+.aow-player__icon-item.selected .aow-player__icon-item__icon {
+  color: #000; }
+
+/* ICON LIST HOVER ITEM - NOT SELECTED */
+.aow-itemslist__list .aow-player__icon-item:not(.selected):hover {
+  border-color: #fff; }
+
+/* ICON LIST HOVER ITEM ICON - NOT SELECTED */
+.aow-player__icon-item:not(.selected):hover .aow-player__icon-item__icon {
+  color: #000; }
+
+/*===================================================================
+    ACTIONS
+===================================================================*/
+.aow-itemslist .aow-itemslist__actions {
+  display: flex;
+  justify-content: space-around; }
+
+.aow-itemslist__actions button.btn {
+  font-size: 150%;
+  width: 120px; }
+
+/*===================================================================
+    PLAYER POOL
+===================================================================*/
+.new-game__settings .players-pool {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px; }
+
+/*===================================================================
+    PLAYER
+===================================================================*/
+.new-game__settings .player-pool__player {
+  display: flex;
+  padding: 5px 60px;
+  opacity: 1;
+  transition: 200ms ease; }
+
+.new-game__settings .player-pool__player:not(:first-of-type) {
+  border-top: solid 1px #FEFEFA; }
+
+.new-game__settings .player-pool__player.disabled {
+  pointer-events: none;
+  opacity: 0; }
+
+/*===================================================================
+    PLAYER COL
+===================================================================*/
+.new-game__settings .player-pool__player .player-col {
+  display: flex;
+  align-items: center; }
+
+/*===================================================================
+    PLAYER NUMBER
+===================================================================*/
+.player-pool__player .player-number {
+  width: 5%; }
+
+.player-pool__player .player-number h3 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #FEFEFA; }
+
+/*===================================================================
+    PLAYER NAME
+===================================================================*/
+.player-pool__player .player-name {
+  width: 40%; }
+
+/*===================================================================
+    PLAYER ICON
+===================================================================*/
+.player-pool__player .player-icon {
+  display: flex;
+  justify-content: center;
+  width: 15%; }
+
+.player-pool__player .player-icon__icon {
+  cursor: pointer; }
+
+.player-pool__player .player-icon__icon .icon-icon {
+  padding: .8rem 1rem;
+  border-radius: 1rem;
+  border: solid 1px transparent;
+  transition: 250ms ease; }
+
+.player-pool__player .player-icon__icon .icon-icon i {
+  font-size: 2.2rem;
+  color: #FEFEFA;
+  transition: 250ms ease; }
+
+.player-pool__player .player-icon__icon:hover .icon-icon {
+  border-color: #131313;
+  background-color: #FEFEFA; }
+
+.player-pool__player .player-icon__icon:hover .icon-icon i {
+  color: #131313; }
+
+/*===================================================================
+    PLAYER COL
+===================================================================*/
+.player-pool__player .player-color {
+  display: flex;
+  justify-content: center;
+  width: 15%; }
+
+.player-pool__player .player-color .color-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer; }
+
+.player-pool__player .player-color .color-color div {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: solid 1px #131313;
+  background-color: springgreen;
+  transition: 150ms ease; }
+
+.player-pool__player .player-color:hover .color-color div {
+  width: 90%;
+  height: 90%;
+  border-radius: 25%; }
+
+/*===================================================================
+    PLAYER COL
+===================================================================*/
+.player-pool__player .player-computer {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end; }
+
+/*===================================================================
+    NAME EDITOR ROOT
+===================================================================*/
+.aow-namebox {
+  --aow-name-editor-color: #FFFFFF;
+  --aow-name-editor-display-font-size: 2rem;
+  --aow-name-editor-input-font-size: 2rem;
+  --aow-name-editor-button-sizes: 1.2rem;
+  --aow-name-editor-error-size: .8rem; }
+
+.aow-namebox {
+  display: inline-flex;
+  align-items: center;
+  /* width: 100%; */
+  color: var(--aow-name-editor-color); }
+
+/*===================================================================
+    NAME EDITOR CONTAINER
+===================================================================*/
+.aow-namebox .aow-name__container {
+  display: flex;
+  align-items: center;
+  transition: 100ms 100ms ease; }
+
+/*===================================================================
+    NAME EDITOR HIDDEN CONTAINER
+===================================================================*/
+.aow-namebox .hidden {
+  opacity: 0;
+  pointer-events: none; }
+
+/*===================================================================
+    NAME EDITOR BUTTON
+===================================================================*/
+.aow-namebox .aow-name__button {
+  font-size: var(--aow-name-editor-button-sizes);
+  cursor: pointer; }
+
+/*===================================================================
+    NAME EDITOR ERROR
+===================================================================*/
+.aow-namebox .aow-name__err {
+  position: absolute;
+  left: .5rem;
+  bottom: -1.5rem;
+  display: inline-block;
+  font-size: var(--aow-name-editor-error-size);
+  color: #FFD12A; }
+
+.aow-namebox .aow-name__err p {
+  margin-bottom: 0px; }
+
+/*===================================================================
+    NAME EDITOR DISPLAY
+===================================================================*/
+.aow-namebox .aow-name__display {
+  font-size: var(--aow-name-editor-display-font-size);
+  position: absolute; }
+
+.aow-namebox .aow-name__display p {
+  padding-top: .2rem;
+  padding-left: .4rem;
+  margin-right: 1rem;
+  margin-bottom: .3rem; }
+
+/* NAME EDITOR EDIT BUTTON */
+.aow-namebox .aow-name__edit {
+  color: #FFCC33; }
+
+/* NAME EDITOR EDIT BUTTON HOVER */
+.aow-namebox .aow-name__edit:hover {
+  color: #FF9933; }
+
+/*===================================================================
+    NAME EDITOR EDITOR
+===================================================================*/
+.aow-namebox .aow-name__editor {
+  position: relative;
+  justify-content: space-between; }
+
+/*===================================================================
+    NAME EDITOR EDITOR INPUT
+===================================================================*/
+.aow-namebox .aow-name__editor input {
+  display: block;
+  width: 60%;
+  padding-left: .4rem;
+  font-size: var(--aow-name-editor-display-font-size);
+  color: var(--aow-name-editor-color);
+  outline: none;
+  border: none;
+  border-bottom: solid 1px var(--aow-name-editor-color);
+  background-color: transparent; }
+
+/*===================================================================
+    NAME EDITOR EDITOR CLEAR - RANDOM - DELETE
+===================================================================*/
+/* NAME EDITOR CLEAR BUTTON */
+.aow-namebox .aow-name__clear {
+  color: #FD5B78; }
+
+/* NAME EDITOR CLEAR BUTTON HOVER */
+.aow-namebox .aow-name__clear:hover {
+  color: #FD0E35; }
+
+/* NAME EDITOR RANDOM BUTTON */
+.aow-namebox .aow-name__random {
+  color: #50BFE6; }
+
+/* NAME EDITOR RANDOM BUTTON HOVER */
+.aow-namebox .aow-name__random:hover {
+  color: #0066FF; }
+
+/* NAME EDITOR SAVE BUTTON */
+.aow-namebox .aow-name__save {
+  color: #8FD400; }
+
+/* NAME EDITOR SAVE BUTTON HOVER */
+.aow-namebox .aow-name__save:hover {
+  color: #299617; }
+
+/*===================================================================
+    CHECKBUTTON ROOT
+===================================================================*/
+.aow-checkbox {
+  /* checkbox PADDING */
+  --aow-checkbox-padding: .4rem .8rem .4rem 1rem;
+  /* checkbox GENERAL FONT SIZE AND COLOR */
+  --aow-checkbox-font-size: 1.4rem;
+  --aow-checkbox-font-color: #FFFFFF;
+  /* checkbox OUTER BORDER AND RADIUS */
+  --aow-checkbox-border: solid 1px #313131;
+  --aow-checkbox-radius: .8rem;
+  /* checkbox MARK HOLDER SIZE AND RIGHT POS */
+  --aow-checkbox-mark-holder-size: 1.2rem;
+  --aow-checkbox-mark-holder-right: 1.2rem;
+  /* checkbox MARK HOLDER BORDER AND RADIUS */
+  --aow-checkbox-mark-holder-radius: .3rem;
+  --aow-checkbox-mark-holder-border: solid 1px #313131;
+  /* checkbox MARK SIZE AND COLOR */
+  --aow-checkbox-mark-size: 1.6rem;
+  --aow-checkbox-mark-color: #FFFFFF;
+  /* checkbox CHECKED BACKGROUND AND HOVER */
+  --aow-checkbox-checked: #00C000;
+  --aow-checkbox-checked-hover: #008000;
+  /* checkbox UNCHECK BACKGROUND AND HOVER */
+  --aow-checkbox-unchecked: #FF355E;
+  --aow-checkbox-unchecked-hover:	#C00000;
+  /* checkbox LABEL RIGHT SPACE */
+  --aow-checkbox-label-right-space: calc( 
+        2.4 * var(--aow-checkbox-mark-holder-size)
+    ); }
+
+.aow-checkbox {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--aow-checkbox-radius);
+  border: var(--aow-checkbox-border);
+  font-size: var(--aow-checkbox-font-size);
+  color: var(--aow-checkbox-font-color);
+  padding: var(--aow-checkbox-padding);
+  cursor: pointer; }
+
+/*===================================================================
+    CHECKBUTTON TEXT LABEL
+===================================================================*/
+.aow-checkbox .aow-checkbox__label {
+  position: relative;
+  z-index: 1001;
+  padding-right: var(--aow-checkbox-label-right-space);
+  user-select: none; }
+
+/*===================================================================
+    CHECKBUTTON MARK CONTAINER
+===================================================================*/
+.aow-checkbox .aow-checkbox__mark {
+  display: inline-flex;
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  right: var(--aow-checkbox-mark-holder-right);
+  transform: translateY(-50%); }
+
+/*===================================================================
+    CHECKBUTTON MARK HOLDER
+===================================================================*/
+.aow-checkbox .aow-checkbox__mark span {
+  position: relative;
+  width: var(--aow-checkbox-mark-holder-size);
+  height: var(--aow-checkbox-mark-holder-size);
+  border: var(--aow-checkbox-mark-holder-border);
+  border-radius: var(--aow-checkbox-mark-holder-radius);
+  transition: 200ms ease; }
+
+/*===================================================================
+    CHECKBUTTON ACTUAL MARK
+===================================================================*/
+.aow-checkbox .aow-checkbox__mark span i {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--aow-checkbox-mark-size);
+  color: var(--aow-checkbox-mark-color); }
+
+.aow-checkbox.checked .aow-checkbox__mark span i {
+  opacity: 1; }
+
+/*===================================================================
+    CHECKBUTTON COLOR UNCHECKD
+===================================================================*/
+.aow-checkbox .aow-checkbox__mark span {
+  box-shadow: 0px 0px 0px 2000px var(--aow-checkbox-unchecked); }
+
+.aow-checkbox:hover .aow-checkbox__mark span {
+  box-shadow: 0px 0px 0px 2000px var(--aow-checkbox-unchecked-hover); }
+
+/*===================================================================
+    CHECKBUTTON COLOR CHECKED
+===================================================================*/
+.aow-checkbox.checked .aow-checkbox__mark span {
+  box-shadow: 0px 0px 0px 2000px var(--aow-checkbox-checked); }
+
+.aow-checkbox.checked:hover .aow-checkbox__mark span {
+  box-shadow: 0px 0px 0px 2000px var(--aow-checkbox-checked-hover); }
+

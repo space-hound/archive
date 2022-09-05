@@ -1,0 +1,55 @@
+footer{
+	width: 100%;
+	border: solid 2px #000;
+	background-color: #212121;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+
+	padding: 20px 75px 20px 45px;
+}
+
+footer .name{
+	font-family: 'Bitter', serif;
+	font-size: 20px;
+	font-weight: 700;
+	color: #ffc107;
+}
+
+footer .footer-menu{
+	margin-top: 60px;
+}
+
+footer .footer-menu a{
+	font-family: 'Bitter', serif;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #364fc7;
+
+	margin-left: 20px;
+	padding: 0px 7px;
+
+	border-bottom: solid 2px transparent;
+
+	transition: ease 0.5s;
+}
+
+footer .footer-menu a:hover{
+	color: #fff;
+	letter-spacing: 3px;
+	border-bottom: solid 2px #364fc7;
+}
+
+footer .motto{
+	font-family: 'Satisfy', cursive;
+	font-size: 22px;
+	font-weight: 400;
+	color: #03a9f4;
+
+	margin-top: 30px;
+}

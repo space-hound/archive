@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>How To - FIZZ BUZZ</title>
+
+    <script src="./fizzbuzz.js" defer></script>
+    <script src="./utils.js" defer></script>
+    <script src="./dom.js" defer></script>
+    <script src="./validation.js" defer></script>
+    <script src="./ui.js" defer></script>
+    <script src="./main.js" defer></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div id="title">
+            <a href="https://github.com/space-hound/web-fizzbuzz" target="_blank"><h3><span>FIZZ BUZZ</span> - The Right Way</h3></a>
+        </div>
+
+        <div id="controls">
+            <div class="interval">
+                <div class="min">
+                    min: <input type="text" value="1" data-validation="number">
+                </div>
+
+                <div class="max">
+                    max: <input type="text" value="100" data-validation="number">
+                </div>
+
+                <div class="delay">
+                    delay: <input type="text" value="50" data-validation="number">
+                </div>
+            </div>
+
+            <div class="actions">
+                <button class="rules"> Rules </button>
+
+                <button class="start"> Start </button>
+            </div>
+
+        </div>
+
+        <div id="rules-cover" class="d-none">
+
+        </div>
+
+        <div id="rules" class="d-none">
+
+            <div class="rules__actions">
+                <button class="add">Add</button>
+                <button class="close">Close</button>
+            </div>
+
+            <div class="rules__rules">
+                
+            </div>
+
+        </div>
+
+        <div id="display">
+
+        </div>
+
+    </div>
+</body>
+</html>

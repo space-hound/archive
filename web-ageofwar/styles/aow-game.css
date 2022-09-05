@@ -1,0 +1,643 @@
+/* ========================================================================================= */
+/* ========================================================================================= */
+#app.aow-game__container .aow-cover {
+  background-image: url(../assets/game-cover.jpg); }
+  #app.aow-game__container .aow-cover .aow-mask {
+    background-color: #1B1B1B;
+    opacity: .1; }
+
+/* ========================================================================================= */
+/* ========================================================================================= */
+#turn-tracker {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 120;
+  padding: .4rem .8rem;
+  margin-right: .4rem;
+  margin-bottom: .4rem;
+  opacity: .7;
+  border-radius: 1rem;
+  border: 1px solid #ffffff;
+  background-color: #1B1B1B; }
+  #turn-tracker .turns {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #ffffff; }
+    #turn-tracker .turns span {
+      font-weight: bold; }
+
+#current-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  margin-left: .6rem;
+  margin-top: .2rem;
+  padding: .8rem 1.4rem;
+  background-color: #1B1B1B;
+  border-radius: 1rem;
+  border: 1px solid #ffffff;
+  opacity: .7; }
+  #current-player .player__icon {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem; }
+    #current-player .player__icon .icon-outer {
+      padding: .2rem;
+      border-radius: 50%;
+      background-color: white; }
+      #current-player .player__icon .icon-outer .icon-inner {
+        position: relative;
+        padding: .4rem;
+        border-radius: 50%;
+        background-color: yellow;
+        width: 60px;
+        height: 60px; }
+        #current-player .player__icon .icon-outer .icon-inner .icon-icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
+          #current-player .player__icon .icon-outer .icon-inner .icon-icon i {
+            font-size: 2rem;
+            color: #1B1B1B; }
+  #current-player .player__info {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    color: #ffffff; }
+    #current-player .player__info .player__score {
+      font-size: 1rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center; }
+      #current-player .player__info .player__score span {
+        font-size: 1.2rem;
+        font-weight: 500; }
+    #current-player .player__info .player__turn {
+      font-size: .9rem;
+      text-align: center; }
+
+/* ========================================================================================= */
+/* ========================================================================================= */
+#dices {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: .6rem;
+  margin-top: .2rem;
+  padding: .8rem 1.4rem;
+  display: flex;
+  align-items: center;
+  background-color: #1B1B1B;
+  border-radius: 1rem;
+  border: 1px solid #ffffff;
+  opacity: .7; }
+  #dices button {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 1.4rem; }
+    #dices button:not(:disabled):hover {
+      color: #1B1B1B; }
+  #dices .dices__vr {
+    width: 1px;
+    height: 60px;
+    margin: 0 1rem;
+    background-color: #ffffff; }
+  #dices .aow-dice.standard-dice {
+    margin-right: 9px; }
+  #dices .aow-dice.ultimate-dice {
+    margin-left: 1rem; }
+
+.aow-cover {
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.aow-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5; }
+
+#app .aow-castle {
+  position: absolute;
+  cursor: pointer; }
+  #app .aow-castle img {
+    width: 100%;
+    height: 100%; }
+  #app .aow-castle .mark {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: transparent; }
+    #app .aow-castle .mark .outer-mark {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      background-color: yellow; }
+    #app .aow-castle .mark:after, #app .aow-castle .mark:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff; }
+    #app .aow-castle .mark:after {
+      transform: translateY(-50%) rotate(45deg); }
+    #app .aow-castle .mark:before {
+      transform: translateY(-50%) rotate(-45deg); }
+  #app .aow-castle.conquered .mark {
+    display: block; }
+
+.aow-dice {
+  border-radius: .5rem;
+  border: 1px solid #000000;
+  background-color: #ffffff; }
+  .aow-dice .aow-dice__dice {
+    position: relative;
+    box-sizing: content-box;
+    padding: .3rem;
+    width: 48px;
+    height: 48px;
+    overflow: hidden; }
+    .aow-dice .aow-dice__dice .aow-dice__face {
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      transform: translateX(-50%); }
+      .aow-dice .aow-dice__dice .aow-dice__face img {
+        box-sizing: content-box;
+        padding: .3rem;
+        width: 48px;
+        height: 48px; }
+
+#castle-viewer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 110;
+  margin-left: .6rem;
+  margin-bottom: .4rem;
+  padding: 1rem 1.4rem;
+  border-radius: 1rem;
+  border: 1px solid #ffffff;
+  background-color: #1B1B1B;
+  opacity: .9; }
+  #castle-viewer .castle-viewer__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: .6rem;
+    margin-right: .8rem;
+    cursor: pointer; }
+    #castle-viewer .castle-viewer__close i {
+      font-size: 1.2rem;
+      color: #ffffff; }
+    #castle-viewer .castle-viewer__close:hover i {
+      color: #dc3545; }
+
+#castle-viewer .castle-viewer__content {
+  display: flex; }
+  #castle-viewer .castle-viewer__content .castle-viewer__image {
+    margin: auto 0;
+    width: 80px;
+    height: 80px;
+    margin-right: 1rem; }
+    #castle-viewer .castle-viewer__content .castle-viewer__image img {
+      width: 100%;
+      height: 100%; }
+  #castle-viewer .castle-viewer__content .castle-viewer__info {
+    display: flex; }
+
+#castle-viewer .castle-viewer__unconq {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-right: 1.4rem; }
+  #castle-viewer .castle-viewer__unconq .unconq-weapons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem; }
+    #castle-viewer .castle-viewer__unconq .unconq-weapons .unconq-weapons__weapon {
+      display: inline-flex;
+      align-items: center;
+      margin-top: .5rem;
+      padding: .1rem .3rem;
+      border-radius: .6rem;
+      border: 1px solid #000000;
+      background-color: #f8f9fa; }
+      #castle-viewer .castle-viewer__unconq .unconq-weapons .unconq-weapons__weapon:not(:last-of-type) {
+        margin-right: .1rem; }
+      #castle-viewer .castle-viewer__unconq .unconq-weapons .unconq-weapons__weapon .weapon-image {
+        width: 32px;
+        height: 32px; }
+        #castle-viewer .castle-viewer__unconq .unconq-weapons .unconq-weapons__weapon .weapon-image img {
+          width: 100%;
+          height: 100%; }
+      #castle-viewer .castle-viewer__unconq .unconq-weapons .unconq-weapons__weapon .weapon-value {
+        margin-left: .3rem; }
+        #castle-viewer .castle-viewer__unconq .unconq-weapons .unconq-weapons__weapon .weapon-value p {
+          font-size: 1.6rem; }
+  #castle-viewer .castle-viewer__unconq .unconq-others {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center; }
+    #castle-viewer .castle-viewer__unconq .unconq-others .unconq-score {
+      margin-left: 3rem; }
+      #castle-viewer .castle-viewer__unconq .unconq-others .unconq-score p {
+        color: #ffffff;
+        font-size: 1.4rem; }
+        #castle-viewer .castle-viewer__unconq .unconq-others .unconq-score p span {
+          font-weight: bold; }
+    #castle-viewer .castle-viewer__unconq .unconq-others .unconq-action {
+      margin-right: auto; }
+      #castle-viewer .castle-viewer__unconq .unconq-others .unconq-action button {
+        padding-top: .5rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 3px; }
+
+#castle-viewer .castle-viewer__info {
+  padding-right: 1.4rem; }
+  #castle-viewer .castle-viewer__info .castle-viewer__conq {
+    display: flex;
+    align-items: center; }
+    #castle-viewer .castle-viewer__info .castle-viewer__conq .conq-info p {
+      font-size: 1.4rem;
+      color: #f8f9fa; }
+    #castle-viewer .castle-viewer__info .castle-viewer__conq .conq-banner {
+      width: 48px;
+      height: 48px;
+      margin: 0 1rem; }
+      #castle-viewer .castle-viewer__info .castle-viewer__conq .conq-banner .conq-banner__color {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: relative; }
+        #castle-viewer .castle-viewer__info .castle-viewer__conq .conq-banner .conq-banner__color i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 2rem; }
+    #castle-viewer .castle-viewer__info .castle-viewer__conq .conq-name p {
+      font-size: 1.6rem;
+      color: #f8f9fa; }
+
+#castle-viewer .castle-viewer__info .castle-viewer__special {
+  display: flex;
+  align-items: center; }
+  #castle-viewer .castle-viewer__info .castle-viewer__special p {
+    font-size: 1.4rem;
+    color: #f8f9fa; }
+
+#duel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 130; }
+  #duel .duel-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/game-cover.jpg); }
+    #duel .duel-cover .duel-mask {
+      width: 100%;
+      height: 100%;
+      background-color: #1B1B1B;
+      opacity: .7; }
+  #duel .duel-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid #1B1B1B;
+    background-color: #ffffff; }
+    #duel .duel-wrapper .duel-header {
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 1px; }
+    #duel .duel-wrapper .duel-hr {
+      width: 100%;
+      height: 1px;
+      background-color: #1B1B1B;
+      margin: .4rem 0; }
+    #duel .duel-wrapper .duel-player {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: .4rem 0;
+      border-radius: 1rem;
+      border: 1px solid #1B1B1B;
+      transition: all ease 250ms;
+      cursor: pointer; }
+      #duel .duel-wrapper .duel-player .player-banner {
+        margin-right: 1rem; }
+        #duel .duel-wrapper .duel-player .player-banner .player-color {
+          position: relative;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%; }
+          #duel .duel-wrapper .duel-player .player-banner .player-color i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.6rem;
+            color: #1B1B1B; }
+      #duel .duel-wrapper .duel-player .player-name {
+        font-size: 1.8rem; }
+      #duel .duel-wrapper .duel-player:hover, #duel .duel-wrapper .duel-player.selected {
+        background-color: #1B1B1B; }
+        #duel .duel-wrapper .duel-player:hover .player-name, #duel .duel-wrapper .duel-player.selected .player-name {
+          color: #ffffff; }
+    #duel .duel-wrapper .duel-content button {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+
+#duel .duel-wrapper .duel-content .duel-pick {
+  display: flex;
+  flex-direction: column; }
+  #duel .duel-wrapper .duel-content .duel-pick .duel-pick__player {
+    margin: 1rem 0; }
+    #duel .duel-wrapper .duel-content .duel-pick .duel-pick__player .duel-player:not(:last-of-type) {
+      margin-bottom: .8rem; }
+
+#duel .duel-wrapper .duel-content .duel-rolling {
+  display: flex;
+  flex-direction: column; }
+  #duel .duel-wrapper .duel-content .duel-rolling .duel-player {
+    border: none;
+    cursor: inherit; }
+    #duel .duel-wrapper .duel-content .duel-rolling .duel-player:hover {
+      background-color: #ffffff; }
+      #duel .duel-wrapper .duel-content .duel-rolling .duel-player:hover .player-name {
+        color: #1B1B1B; }
+  #duel .duel-wrapper .duel-content .duel-rolling .duel-rolling__players {
+    padding: 1rem 0; }
+    #duel .duel-wrapper .duel-content .duel-rolling .duel-rolling__players .duel-rolling__players-player:not(:last-of-type) {
+      margin-bottom: 2rem; }
+    #duel .duel-wrapper .duel-content .duel-rolling .duel-rolling__players .duel-rolling__players-player .duel-dices {
+      margin-top: 1rem;
+      display: flex; }
+      #duel .duel-wrapper .duel-content .duel-rolling .duel-rolling__players .duel-rolling__players-player .duel-dices .aow-dice:not(:last-of-type) {
+        margin-right: .8rem; }
+  #duel .duel-wrapper .duel-content .duel-rolling button {
+    margin-top: 1rem; }
+
+#duel .duel-wrapper .duel-content .duel-winner {
+  display: flex;
+  flex-direction: column; }
+  #duel .duel-wrapper .duel-content .duel-winner .duel-player {
+    border: none;
+    cursor: inherit; }
+    #duel .duel-wrapper .duel-content .duel-winner .duel-player:hover {
+      background-color: #ffffff; }
+      #duel .duel-wrapper .duel-content .duel-winner .duel-player:hover .player-name {
+        color: #1B1B1B; }
+  #duel .duel-wrapper .duel-content .duel-winner .winner {
+    margin: 1.4rem 0; }
+    #duel .duel-wrapper .duel-content .duel-winner .winner span {
+      display: block;
+      text-align: center;
+      font-size: 1.4rem; }
+
+#conquest {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 130; }
+  #conquest .conquest-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/game-cover.jpg); }
+    #conquest .conquest-cover .conquest-mask {
+      width: 100%;
+      height: 100%;
+      background-color: #1B1B1B;
+      opacity: .7; }
+  #conquest .conquest-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid #1B1B1B;
+    background-color: #ffffff; }
+    #conquest .conquest-wrapper .conquest-header {
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center; }
+      #conquest .conquest-wrapper .conquest-header .conquest-header__text {
+        margin-left: .4rem;
+        font-size: 2rem;
+        letter-spacing: 1px; }
+      #conquest .conquest-wrapper .conquest-header .conquest-header__img {
+        width: 48px;
+        height: 48px; }
+        #conquest .conquest-wrapper .conquest-header .conquest-header__img img {
+          width: 100%;
+          height: 100%; }
+    #conquest .conquest-wrapper .conquest-hr {
+      width: 100%;
+      height: 1px;
+      background-color: #1B1B1B;
+      margin: .4rem 0; }
+    #conquest .conquest-wrapper .conquest-player {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: .4rem 0;
+      border-radius: 1rem;
+      border: 1px solid #1B1B1B;
+      transition: all ease 250ms;
+      cursor: pointer; }
+      #conquest .conquest-wrapper .conquest-player .player-banner {
+        margin-right: 1rem; }
+        #conquest .conquest-wrapper .conquest-player .player-banner .player-color {
+          position: relative;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%; }
+          #conquest .conquest-wrapper .conquest-player .player-banner .player-color i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.6rem;
+            color: #1B1B1B; }
+      #conquest .conquest-wrapper .conquest-player .player-name {
+        font-size: 1.8rem; }
+      #conquest .conquest-wrapper .conquest-player:hover, #conquest .conquest-wrapper .conquest-player.selected {
+        background-color: #1B1B1B; }
+        #conquest .conquest-wrapper .conquest-player:hover .player-name, #conquest .conquest-wrapper .conquest-player.selected .player-name {
+          color: #ffffff; }
+    #conquest .conquest-wrapper .conquest-content button {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+
+#conquest .conquest-wrapper .conquest-content .conquest-pick {
+  display: flex;
+  flex-direction: column; }
+  #conquest .conquest-wrapper .conquest-content .conquest-pick .conquest-pick__player {
+    margin: 1rem 0; }
+    #conquest .conquest-wrapper .conquest-content .conquest-pick .conquest-pick__player .conquest-player:not(:last-of-type) {
+      margin-bottom: .8rem; }
+
+#conquest .conquest-wrapper .conquest-content .conquest-rolling {
+  display: flex;
+  flex-direction: column; }
+  #conquest .conquest-wrapper .conquest-content .conquest-rolling .conquest-player {
+    border: none;
+    cursor: inherit; }
+    #conquest .conquest-wrapper .conquest-content .conquest-rolling .conquest-player:hover {
+      background-color: #ffffff; }
+      #conquest .conquest-wrapper .conquest-content .conquest-rolling .conquest-player:hover .player-name {
+        color: #1B1B1B; }
+  #conquest .conquest-wrapper .conquest-content .conquest-rolling .conquest-rolling__players {
+    padding: 1rem 0; }
+    #conquest .conquest-wrapper .conquest-content .conquest-rolling .conquest-rolling__players .conquest-rolling__players-player {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      #conquest .conquest-wrapper .conquest-content .conquest-rolling .conquest-rolling__players .conquest-rolling__players-player:not(:last-of-type) {
+        margin-bottom: 2rem; }
+      #conquest .conquest-wrapper .conquest-content .conquest-rolling .conquest-rolling__players .conquest-rolling__players-player .conquest-dices {
+        margin-left: 1rem;
+        display: flex; }
+        #conquest .conquest-wrapper .conquest-content .conquest-rolling .conquest-rolling__players .conquest-rolling__players-player .conquest-dices .aow-dice:not(:last-of-type) {
+          margin-right: .8rem; }
+  #conquest .conquest-wrapper .conquest-content .conquest-rolling button {
+    margin-top: 1rem; }
+
+#conquest .conquest-wrapper .conquest-content .conquest-winner {
+  display: flex;
+  flex-direction: column; }
+  #conquest .conquest-wrapper .conquest-content .conquest-winner .conquest-player {
+    border: none;
+    cursor: inherit; }
+    #conquest .conquest-wrapper .conquest-content .conquest-winner .conquest-player:hover {
+      background-color: #ffffff; }
+      #conquest .conquest-wrapper .conquest-content .conquest-winner .conquest-player:hover .player-name {
+        color: #1B1B1B; }
+  #conquest .conquest-wrapper .conquest-content .conquest-winner .winner {
+    margin: 1.4rem 0; }
+    #conquest .conquest-wrapper .conquest-content .conquest-winner .winner span {
+      display: block;
+      text-align: center;
+      font-size: 1.4rem; }
+    #conquest .conquest-wrapper .conquest-content .conquest-winner .winner .conquest-score {
+      display: block;
+      text-align: center;
+      font-size: 1.4rem; }
+
+#game-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 130; }
+  #game-over .game-over-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/game-cover.jpg); }
+    #game-over .game-over-cover .game-over-mask {
+      width: 100%;
+      height: 100%;
+      background-color: #1B1B1B;
+      opacity: .7; }
+  #game-over .game-over-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid #1B1B1B;
+    background-color: #ffffff; }
+    #game-over .game-over-wrapper .game-over-header {
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 1px; }
+    #game-over .game-over-wrapper .game-over-hr {
+      width: 100%;
+      height: 1px;
+      background-color: #1B1B1B;
+      margin: .4rem 0; }
+    #game-over .game-over-wrapper .game-over-player {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: .4rem 0;
+      transition: all ease 250ms;
+      cursor: pointer; }
+      #game-over .game-over-wrapper .game-over-player .player-banner .player-color {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%; }
+        #game-over .game-over-wrapper .game-over-player .player-banner .player-color i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 1.6rem;
+          color: #1B1B1B; }
+      #game-over .game-over-wrapper .game-over-player .player-name {
+        margin-left: .8rem;
+        margin-right: 4rem;
+        font-size: 1.8rem; }
+      #game-over .game-over-wrapper .game-over-player .player-score {
+        margin-left: auto;
+        font-size: 1.8rem; }
+      #game-over .game-over-wrapper .game-over-player:not(:last-of-type) {
+        margin-bottom: 1rem; }
+    #game-over .game-over-wrapper button {
+      margin-top: 1rem;
+      margin-bottom: .5rem;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+

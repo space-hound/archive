@@ -1,0 +1,79 @@
+#app {
+  width: 100% !important;
+  color: #ffffff;
+  font-size: 1.4rem; }
+  #app.rules__container .aow-cover {
+    background-image: url(../assets/rules-cover.jpg); }
+    #app.rules__container .aow-cover .aow-mask {
+      background-color: #1B1B1B; }
+  #app .back-btn {
+    position: fixed;
+    top: 30px;
+    left: 30px; }
+    @media (max-width: 1300px) {
+      #app .back-btn {
+        font-size: .6rem;
+        top: 30px;
+        left: 10px;
+        transform: rotate(-90deg); } }
+  #app h1 {
+    font-size: 1.8em; }
+  #app h3 {
+    font-size: 1.2em; }
+  #app p {
+    font-size: 1em; }
+  #app ul li, #app ol li {
+    font-size: .8em; }
+  #app ul li {
+    list-style: circle; }
+  #app ol li {
+    list-style: inherit; }
+  #app .preview {
+    border-radius: 1em;
+    border: 3px solid #ffffff; }
+    #app .preview img {
+      border-radius: 1em; }
+  #app .indented p {
+    text-indent: 1em;
+    margin-bottom: 1rem; }
+    #app .indented p::first-letter {
+      font-size: 2rem; }
+  #app .dice-presentation {
+    margin-bottom: 2rem; }
+    #app .dice-presentation .dice-presentation__list {
+      margin-left: 5rem;
+      margin-bottom: 2rem; }
+    #app .dice-presentation .dice-presentation__images {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 6rem; }
+      #app .dice-presentation .dice-presentation__images .dice-presentation__image {
+        width: 128px;
+        height: 128px;
+        border-radius: 1rem;
+        background-color: #ffffff;
+        border: 2px solid #1B1B1B;
+        opacity: .8; }
+        #app .dice-presentation .dice-presentation__images .dice-presentation__image img {
+          border-radius: 1rem;
+          width: 100%;
+          height: 100%; }
+        #app .dice-presentation .dice-presentation__images .dice-presentation__image:not(:last-of-type) {
+          margin-right: 1rem; }
+
+.aow-cover {
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.aow-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5; }
+

@@ -1,0 +1,38 @@
+.container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.mod {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 3px;
+    border: 1px solid black;
+}
+
+.mod h1 {
+    font-size: 16px;
+    margin: 9px;
+}
+
+.mod .name {
+    font-size: 16px;
+    margin: 9px;
+}
+
+
+.mod .open {
+    padding: 16px 32px;
+    margin: 9px;
+    border: 1px solid black;
+}
+
+.mod p {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+}

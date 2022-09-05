@@ -1,0 +1,155 @@
+main{
+	display: flex;
+	flex-flow: column;
+
+	background-color: rgb(195, 195, 195);
+	padding-bottom: 60px;
+}
+
+main .shout-out{
+	font-family: 'Cuprum', sans-serif;
+	text-align: center;
+	letter-spacing: -2px;
+	font-size: 36px;
+	font-weight: 400;
+	font-style: italic;
+	color: #212121;
+
+	padding: 30px;
+	background-color: #ffc107;
+	border-bottom: solid 1px #212121;
+}
+
+main .shout-out p:before{
+	content:'\201c';
+	display: inline-block;
+}
+
+main .shout-out p:after{
+	content:'\201d';
+	display: inline-block;
+}
+
+main .central{
+	width: 90%;
+	margin: 60px auto 0px auto;
+	padding-bottom: 60px;
+
+	background-color: #333;
+	border-radius: 10px;
+	border: solid 3px #000;
+
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+main .central .central-content{
+	width: 100%;
+	padding: 60px 40px 25px 40px;
+}
+
+main .central .central-content .central-content-img{
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+}
+
+main .central .central-content .central-content-img .central-content-line{
+	width: 30%;
+	height: 7px;
+
+	border: solid 2px #000;
+	border-radius: 7px;
+
+	background-color: #ffc107;
+}
+
+main .central .central-content .central-content-img img{
+	width: 30%;
+	margin: 0px 40px 40px 40px;
+	border: solid 2px #000;
+	border-radius: 50%;
+}
+
+main .central .central-content .central-content-text{
+	text-align: center;
+	padding: 15px 15px 0px 15px;
+	
+}
+
+main .central .central-content .central-content-text p{
+	font-family: 'Great Vibes', cursive;
+	font-size: 28px;
+	font-weight: 400;
+
+	word-spacing: 2px;
+	line-height: 135%;
+	margin-bottom: 25px;
+	color: #fff;
+}
+
+main .central .big-line{
+	width: 70%;
+	height: 7px;
+	margin-bottom: 45px;
+
+	border: solid 2px #000;
+	border-radius: 7px;
+	background-color: #ffc107;
+}
+
+main .central .secondary{
+	width: 100%;
+
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+main .central .secondary .central-secondary{
+	width: 45%;
+	padding: 10px;
+
+	border: solid 2px #000;
+	border-radius: 10px;
+	background-color: #ffc107;
+
+	text-align: center;
+}
+
+main .central .secondary .central-secondary img{
+	width: 100%;
+	height: 250px;
+	margin-bottom: 20px;
+
+	border: solid 2px #000;
+	border-radius: 10px;
+}
+
+main .central .secondary .central-secondary p{
+	font-family: 'Cuprum', sans-serif;
+	line-height: 125%;
+	text-align: left;
+	font-size: 18px;
+	font-weight: 700;
+	color: #000;
+
+	margin: 0 5%;
+}
+
+main .central .secondary .central-secondary p:after{
+	display: block;
+	text-align: right;
+	text-decoration: underline;
+	letter-spacing: -1px;
+	content: "Read More...";
+	font-size: 135%;
+	color: #364fc7;
+
+	margin-bottom: 15px;
+}

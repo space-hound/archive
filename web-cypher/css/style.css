@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:400,600');
+/*  font-family: 'Saira Extra Condensed', sans-serif;  */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
+/*  font-family: 'Raleway', sans-serif;  */
+
+:root {
+    --font-prim: 'Saira Extra Condensed', sans-serif;
+    --font-sec: 'Raleway', sans-serif;
+}
+
+body {
+    font-family: var(--font-prim);
+    position: relative;
+}
+
+/* =====================================================================================
+            NAVBAR
+===================================================================================== */
+
+.navbar {
+    transition: all 250ms ease;
+}
+
+.navbar a.navbar-brand {
+    font-family: var(--font-sec);
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -3px;
+}
+
+.navbar a.nav-link {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+input.err,
+textarea.err {
+    border-color: var(--danger) !important;
+    box-shadow: 0px 0px 3px 0px var(--danger);
+}
+
+/* =====================================================================================
+            APP
+===================================================================================== */
+
+#cypher {
+    padding: 30px;
+}
+
+#cypher__rule,
+#cypher__crypt,
+#about {
+    transition: opacity ease 125ms;
+}
+
+#cypher__crypt,
+#about {
+    opacity: 0;
+}
+
+/* =====================================================================================
+            RULE SET
+===================================================================================== */
+
+@media ( min-width: 576px ) {
+    .jumbotron {
+        padding: 2rem 2rem;
+    }
+}
+
+#cypher__rule #rule__encrypt .jumbotron .lead {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+#cypher__rule #rule__encrypt .jumbotron hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#cypher__rule #rule__encrypt select,
+#cypher__rule #rule__encrypt input,
+#cypher__rule #rule__encrypt button {
+    font-size: 1.2rem;
+}
+
+#cypher__rule #rule__encrypt button {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* =====================================================================================
+            SINGLE ALPHABET LETTER
+===================================================================================== */
+#cypher__rule #rule__alphabet .alphabet__letter {
+    font-family: var(--font-sec);
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+#cypher__rule #rule__alphabet .alphabet__letter .letter__original label {
+    margin: 0;
+    padding: 0 0;
+    width: 3rem;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--light);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.25rem;
+    border-color: var(--dark);
+    background-color: var(--dark);
+}
+
+#cypher__rule #rule__alphabet .alphabet__letter i {
+    margin: 0 .5rem;
+    font-size: 1.6rem;
+    color: var(--dark);
+}
+
+#cypher__rule #rule__alphabet .alphabet__letter .letter__mask input {
+    width: calc(2 * 1rem + 2rem);
+    padding: 0 0rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    border-color: var(--dark);
+    text-transform: uppercase;
+}
+
+/* =====================================================================================
+            ALPHABET
+===================================================================================== */
+
+#cypher__rule #rule__alphabet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#rule__alert .alert__message {
+    font-size: 1.2rem;
+}
+
+#cypher__rule #rule__finish,
+#cypher__rule #rule__reset {
+    font-size: 1.3rem;
+}
+
+/* =====================================================================================
+            ENCRYPTION DECRIPTION
+===================================================================================== */
+
+#input-type {
+    position: relative;
+}
+
+#cypher__crypt #back {
+    position: fixed;
+    top: 50%;
+    left: 30px;
+    font-size: 2.4rem;
+    color: var(--gray);
+    cursor: pointer;
+    transition: 150ms ease;
+}
+
+@media (min-width: 750px) and (max-width: 850px) {
+    #cypher__crypt #back {
+        position: absolute;
+        left: -30px;
+        transform: translate(-50%, -50%)
+    }
+}
+
+@media (max-width: 750px) {
+    #cypher__crypt #back {
+        position: absolute;
+        transform: translate(-50%, -50%)
+    }
+}
+
+#cypher__crypt #back:hover {
+    color: var(--primary);
+}
+
+#cypher__crypt label {
+    font-size: 1.4rem;
+}
+
+#cypher__crypt textarea {
+    font-size: 1.2rem;
+}
+
+#about p {
+    font-size: 115%;
+}
+
+#about p:first-of-type {
+    text-indent: 2.5em;
+}

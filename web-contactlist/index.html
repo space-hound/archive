@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact List</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css//style.css">
+
+    <script type="text/javascript" src="./js/utils.js"></script>
+    <script type="text/javascript" src="./js/contactItem.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="contacts-container">
+
+            <div class="title">
+                <h1>Contact Management System</h1>
+            </div>
+
+            <div id="contacts-content">
+                <div class="contacts-header">
+                    <div class="contacts-name">
+                        <h3>Name</h3>
+                    </div>
+                    <div class="contacts-phone">
+                        <h3>Phone</h3>
+                    </div>
+                    <div class="contacts-email">
+                        <h3>Email</h3>
+                    </div>
+                    <div class="contacts-add">
+                        <button>
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contacts-contacts">
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-container" data-edit="">
+            <div class="modal-content">
+                
+                <div class="modal-name">
+                    <input type="text" placeholder="Name">
+                </div>
+
+                <div class="modal-phone">
+                    <input type="text" placeholder="Phone">
+                </div>
+
+                <div class="modal-email">
+                    <input type="text" placeholder="Email">
+                </div>
+
+                <div class="modal-action">
+                    <button class="modal-save">Save</button>
+
+                    <button class="modal-discard">Discard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

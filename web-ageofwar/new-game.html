@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Age Of War - New Game</title>
+
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+<link href="styles/vendor.css" rel="stylesheet"><link href="styles/common.css" rel="stylesheet"><link href="styles/new-game.css" rel="stylesheet"></head>
+<body>
+        <div id="new-game" class="aow-wrapper">
+            <div class="aow-cover new-game__cover">
+                <div class="aow-mask new-game__mask"></div>
+            </div>
+
+            <a href="index.html" class="new-game__return">
+                <i class="fas fa-long-arrow-alt-left"></i>
+                <span>To Menu</span>
+            </a>
+
+            <div class="new-game__settings aow-itemlist__obstacle">
+                <div class="settings-row">
+                    <div class="settings__players settings-col">
+                        <h3>Number of players:</h3>
+                        <div class="aow-selector"></div>
+                    </div>
+    
+                    <div class="settings__gametype settings-col">
+                        <h3>Map type:</h3>
+                        <div class="aow-selector"></div>
+                    </div>
+                </div>
+
+                <div class="settings__row">
+                    <div class="players-pool"></div>
+                </div>
+
+                <div class="finish__row">
+                    <button type="button" class="btn btn-lg">Start Game</button>
+                </div>
+            </div>
+
+            <div class="new-game__icon-selector"></div>
+            <div class="new-game__color-selector"></div>
+        </div>
+<script type="text/javascript" src="js/vendor.js"></script><script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/new-game.js"></script></body>
+</html>

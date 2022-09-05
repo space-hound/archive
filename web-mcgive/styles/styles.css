@@ -1,0 +1,437 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,600,600i,700);
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+header, section, footer {
+  display: block; }
+
+html {
+  font-size: 10px; }
+
+body {
+  width: 100%;
+  min-height: 100%;
+  line-height: 1; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+input, textarea {
+  outline: none; }
+
+.title h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 3.6rem;
+  color: #4d4d4d; }
+  .title h1 span {
+    font-weight: 400;
+    color: #212121; }
+
+.sub-title {
+  width: 100%; }
+  .sub-title h2 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 300;
+    font-size: 2.4rem;
+    color: #4d4d4d; }
+    .sub-title h2::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin-top: 10px;
+      background-color: #c3c3c3; }
+
+.logo h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2.6rem;
+  color: white; }
+  .logo h1 span {
+    font-size: 2.8rem;
+    font-weight: 400; }
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+  color: #4d4d4d;
+  background-color: white; }
+
+.site-container {
+  width: 100%;
+  min-height: 100vh; }
+
+.has-text-input {
+  width: 60%; }
+  .has-text-input input,
+  .has-text-input textarea {
+    font-size: 1.6rem;
+    color: #4d4d4d;
+    display: block;
+    width: 100%;
+    padding: 6px 9px;
+    border: solid 1px #c3c3c3;
+    border-radius: 3px; }
+    .has-text-input input:focus,
+    .has-text-input textarea:focus {
+      color: #212121;
+      border-color: #f23a2e; }
+
+@media only screen and (max-width: 786px) {
+  .has-text-input {
+    width: 100%; } }
+
+.has-check-input .custom-check {
+  cursor: pointer;
+  display: inline-block;
+  position: relative; }
+  .has-check-input .custom-check input {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%; }
+    .has-check-input .custom-check input:checked ~ .checkmark .checker::after {
+      background-color: #f23a2e; }
+  .has-check-input .custom-check .checkmark {
+    position: relative;
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #212121; }
+    .has-check-input .custom-check .checkmark .checker {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      width: 81%;
+      height: 81%;
+      border-radius: 50%;
+      background-color: white; }
+      .has-check-input .custom-check .checkmark .checker::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 61%;
+        height: 61%;
+        border-radius: 50%;
+        background-color: transparent; }
+  .has-check-input .custom-check span {
+    position: relative;
+    vertical-align: top;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #54595e;
+    margin-right: 9px; }
+    .has-check-input .custom-check span::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 1px;
+      transform: translate(-50%, -25%);
+      width: 0%;
+      height: 1px;
+      background-color: #212121;
+      transition: width ease .15s; }
+  .has-check-input .custom-check:hover span {
+    color: #212121; }
+    .has-check-input .custom-check:hover span::after {
+      width: 105%; }
+
+.has-check-input.inverted .checkmark {
+  float: left;
+  margin-right: 9px; }
+
+@media only screen and (max-width: 786px) {
+  .has-check-input {
+    width: 100% !important;
+    justify-content: center; }
+    .has-check-input .checbox {
+      margin-right: 30px; } }
+
+header {
+  width: 100%;
+  background-color: #f23a2e;
+  border-bottom: 1px solid #c3c3c3; }
+  header .header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 10px 120px 10px 180px; }
+    header .header-content .logo {
+      margin-right: 120px; }
+    header .header-content .menu {
+      flex: 1; }
+
+@media only screen and (min-width: 420px) and (max-width: 786px) {
+  header .header-content {
+    padding: 10px 30px 10px 30px; }
+  header .logo {
+    margin-right: 0px; } }
+
+@media only screen and (max-width: 420px) {
+  header .header-content {
+    padding: 10px 10px 10px 10px; }
+  header .logo {
+    margin-right: 0px; } }
+
+.menu {
+  height: 100%; }
+  .menu .nav-bar {
+    height: 100%; }
+    .menu .nav-bar .nav-item {
+      height: 100%; }
+
+.menu .nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+  .menu .nav-bar .nav-item {
+    display: flex;
+    align-items: center;
+    padding-right: 30px; }
+    .menu .nav-bar .nav-item:last-child {
+      padding-right: 0px; }
+
+.menu .nav-bar .nav-item a {
+  display: inline-block;
+  position: relative;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color ease .15s; }
+
+.menu .nav-bar .nav-item:hover a {
+  color: white; }
+
+.menu .nav-bar .nav-item a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 75%);
+  background-color: white;
+  transition: width ease-in .15s; }
+
+.menu .nav-bar .nav-item:hover a::before {
+  width: 110%; }
+
+.content .content-content {
+  padding: 60px 120px; }
+  .content .content-content .title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 90px; }
+
+@media only screen and (min-width: 420px) and (max-width: 786px) {
+  .content .content-content {
+    padding: 60px 30px; } }
+
+@media only screen and (max-width: 420px) {
+  .content .content-content {
+    padding: 30px 0px; } }
+
+footer {
+  width: 100%;
+  padding: 16px 60px;
+  background-color: #f23a2e;
+  border-top: 1px solid #c3c3c3;
+  font-size: 1rem;
+  color: white;
+  text-align: center; }
+  footer p {
+    display: inline-block; }
+  footer a {
+    font-weight: 600;
+    color: #c3c3c3; }
+
+#mcgive .mc-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 30px; }
+
+#mcgive #mc-configuration,
+#mcgive #mc-items,
+#mcgive #mc-encantments,
+#mcgive #mc-flags,
+#mcgive #mc-output {
+  margin-bottom: 45px; }
+  #mcgive #mc-configuration .sub-title,
+  #mcgive #mc-items .sub-title,
+  #mcgive #mc-encantments .sub-title,
+  #mcgive #mc-flags .sub-title,
+  #mcgive #mc-output .sub-title {
+    margin-bottom: 30px; }
+
+#mcgive #mc-configuration {
+  display: flex;
+  flex-direction: column; }
+  #mcgive #mc-configuration .mc-player-name,
+  #mcgive #mc-configuration .mc-item-lore {
+    margin-left: 60px; }
+  #mcgive #mc-configuration .mc-item-unbreakable {
+    margin-top: 20px;
+    margin-left: 90px; }
+  #mcgive #mc-configuration .mc-player-name,
+  #mcgive #mc-configuration .mc-item-lore {
+    margin-bottom: 16px; }
+
+#mcgive #mc-flags .has-check-input {
+  width: auto;
+  display: inline-block;
+  margin-left: 60px; }
+
+@media only screen and (max-width: 786px) {
+  #mcgive #mc-configuration .mc-player-name,
+  #mcgive #mc-configuration .mc-item-lore {
+    margin-left: 0px; }
+  #mcgive #mc-flags .has-check-input {
+    padding: 30px; } }
+
+#mc-output .command {
+  width: 90% !important;
+  margin: 0 auto;
+  margin-top: 30px; }
+  #mc-output .command textarea {
+    resize: none;
+    padding: 16px; }
+
+#mc-output .copy {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; }
+  #mc-output .copy button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 6px 9px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: white;
+    border-radius: 6px;
+    border: solid 1px #54595e;
+    background-color: #f23a2e; }
+    #mc-output .copy button .cross {
+      margin-right: 9px;
+      position: relative;
+      width: 12px;
+      height: 12px; }
+      #mc-output .copy button .cross:after, #mc-output .copy button .cross:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+      #mc-output .copy button .cross:before {
+        transform: translate(-50%, -50%) rotate(90deg); }
+    #mc-output .copy button:hover {
+      opacity: .9;
+      border-color: #80b1d8; }
+
+#mcgive #mc-items .mc-items-list {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+.mc-items-selector {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.mc-items-selector .mc-item {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  border: solid 2px #54595e;
+  border-radius: 9px;
+  margin: 3px; }
+  .mc-items-selector .mc-item.active {
+    background-color: #f23a2e; }
+  .mc-items-selector .mc-item:hover {
+    background-color: #80b1d8; }
+  .mc-items-selector .mc-item img {
+    width: 32px;
+    height: 32px; }
+
+.mc-items-selector .mc-row {
+  display: flex;
+  flex-direction: row; }
+
+.mc-items-selector .mc-col {
+  display: flex;
+  flex-direction: column; }
+
+.mc-items-selector .mc-justify-center {
+  justify-content: center; }
+
+@media only screen and (max-width: 786px) {
+  .mc-items-selector > .mc-col > .mc-row:first-child {
+    flex-wrap: wrap; }
+  .mc-items-selector > .mc-col > .mc-row .items-others {
+    flex: 1; }
+    .mc-items-selector > .mc-col > .mc-row .items-others > .mc-row {
+      justify-content: center; } }
+
+.mc-ench-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.mc-ench {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  padding: 9px 18px;
+  margin: 10px;
+  border: solid 1px #c3c3c3;
+  border-radius: 3px; }
+  .mc-ench input[type=text] {
+    width: 60px;
+    padding: 6px 6px;
+    border: solid 3px #c3c3c3;
+    border-radius: 3px;
+    text-align: center;
+    transition: border-color ease .15s; }
+    .mc-ench input[type=text]:focus {
+      border-color: #80b1d8; }
+  .mc-ench .custom-check:hover span {
+    color: inherit; }
+    .mc-ench .custom-check:hover span::after {
+      width: 0%; }
+  .mc-ench:hover {
+    background-color: #f23a2e; }
+    .mc-ench:hover .custom-check span {
+      color: white; }
+

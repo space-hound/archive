@@ -1,0 +1,555 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #cccccc;
+    /*   goes-nice: #dddddd;   */
+    padding: 0px;
+    margin: 0px;
+}
+
+.clear {
+    clear: both;
+}
+
+/*========================================#####  CONTAINER  #####========================================*/
+
+.container {
+    width: 1000px;
+    margin: 0px auto;
+    border-top: 9px solid #993399;
+    border-top-right-radius: 1px;
+    border-top-left-radius: 1px;
+}
+
+/*========================================#####  HEADER  #####========================================*/
+
+.header {
+    background-color: #ffffff;
+    float: left;
+    width: 100%;
+}
+
+/*========================================#####  LOGO  #####========================================*/
+
+.logo {
+    padding: 10px 10px 10px 10px;
+    margin: 25px 20px 25px 20px;
+    float: left;
+}
+
+.big-logo {
+    font-family: 'Georgia';
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 1.6em;
+    color: #666666;
+    padding: 0px;
+    margin: 0px;
+}
+
+.first-letter {
+    font-size: 1.4em;
+}
+
+.small-logo {
+    font-family: 'Georgia';
+    font-weight: lighter;
+    font-size: 0.8em;
+    word-spacing: -1px;
+    color: #666666;
+    position: relative;
+    top: -5px;
+    padding-left: 5px;
+    margin: 0px;
+}
+
+/*========================================#####  SEARCH-FORM  #####========================================*/
+
+.search-bar {
+    float: right;
+    height: 30px;
+    padding: 0px;
+    margin: 0px 30px 30px 30px;
+    border-style: none;
+}
+
+.search-bar:hover {
+    border-bottom: 5px solid #993399;
+    border-right: 5px solid #993399;
+    border-left: 5px solid #993399;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+input[name=search-box] {
+    background-color: #ebebea;
+    border-bottom-left-radius: 10px;
+    border-style: none;
+    font-family: 'Georgia';
+    font-size: 1em;
+    font-weight: 500;
+    color: #000000;
+    outline: none;
+    float: left;
+    width: 200px;
+    height: 30px;
+    padding: 0px 0px 0px 10px;
+    margin: 0px;
+}
+
+.submit-back {
+    background-color: #ebebea;
+    border-bottom-right-radius: 10px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+#img-button {
+    background: #ffffff url("././images/srch_1x.png") 5px 5px;
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    border-style: none;
+    border-radius: 50%;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+    margin: 5px 5px 5px 3px;
+}
+
+/*========================================#####  MENU  #####========================================*/
+
+.menu {
+    float: right;
+    padding: 10px 10px 15px 10px;
+    margin: 10px 10px 15px 10px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* las spatiu cu margin sau padding, ambele functioneaza, dar care e mai okay ? */
+
+.menu-list li {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px 25px 0px 0px;
+}
+
+.menu-list li a {
+    font-family: 'Georgia';
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    word-spacing: 2px;
+    color: #666666;
+}
+
+.menu-list li a:hover {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+
+#current {
+    color: #000000;
+}
+
+/*========================================#####  SHOUT  #####========================================*/
+
+.shout {
+    background-color: #ebebea;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.shout p {
+    font-family: "Georgia";
+    font-size: 22px;
+    font-weight: lighter;
+    text-align: center;
+    font-style: italic;
+    color: #333333;
+    line-height: 150%;
+    padding: 10px 5px 10px 5px;
+    margin: 5px 40px 5px 40px;
+}
+
+.shout p:before {
+    content: '\201C';
+    padding-right: 3px;
+}
+
+.shout p:after {
+    content: '\201E';
+    padding-left: 3px;
+}
+
+/*========================================#####  SLIDER  #####========================================*/
+
+.slider-container {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 400px;
+}
+
+.slider-content {
+    position: relative;
+}
+
+.slider-img {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+}
+
+/*========================================#####  SLIDER-BUTTONS  #####========================================*/
+
+.slider-button {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    padding: 0px;
+    margin: 0px;
+    background-color: #000000;
+    border: 2px solid #525252;
+    border-radius: 50%;
+}
+
+#left-slider-button {
+    top: 40%;
+    left: 3%;
+    display: flex;
+}
+
+#left-slider-button-arrow {
+    border-top: 20px solid transparent;
+    border-left: 5px solid #666666;
+    border-right: 20px solid transparent;
+    border-bottom: 5px solid #666666;
+    transform: rotate(45deg);
+    margin-left: auto;
+    margin-right: 7px;
+}
+
+#right-slider-button {
+    top: 40%;
+    right: 3%;
+    display: flex;
+}
+
+#right-slider-button-arrow {
+    border-top: 5px solid #666666;
+    border-left: 20px solid transparent;
+    border-right: 5px solid #666666;
+    border-bottom: 20px solid transparent;
+    transform: rotate(45deg);
+    margin-left: 7px;
+    margin-right: auto;
+}
+
+/*========================================#####  SLIDER-CIRCLES  #####========================================*/
+
+.slider-small-circles {
+    position: absolute;
+    bottom: 6%;
+    left: 3%;
+}
+
+.slider-small-circle {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #666666;
+    border: 2px solid #666666;
+    border-radius: 50%;
+}
+
+#slider-current-circle {
+    background-color: #333333;
+}
+
+/*========================================#####  SLIDER-CAPTION  #####========================================*/
+
+.slider-caption {
+    position: absolute;
+    width: 50%;
+    bottom: 0px;
+    right: 0px;
+    background-color: #0f0f0f;
+}
+
+.slider-caption-inside {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 15px;
+}
+
+.slider-caption .slider-caption-inside h2 {
+    font-family: 'Georgia';
+    color: #c2c2c2;
+    font-weight: 300;
+    padding-bottom: 15px;
+}
+
+.slider-caption .slider-caption-inside p {
+    font-family: 'Georgia';
+    color: #bfbfbf;
+    font-weight: lighter;
+    line-height: 150%;
+}
+
+/*========================================#####  SLIDER-SIZE  #####========================================*/
+
+.slider-size {
+    position: absolute;
+    margin: 0px auto;
+    width: 25%;
+    top: 35%;
+    left: 37.5%;
+}
+
+.slider-size p,
+.slider-sub {
+    text-align: center;
+    font-family: 'Georgia';
+    font-weight: 500;
+    font-size: 35px;
+    color: #ffffff;
+}
+
+.slider-size p .slider-sub {
+    position: relative;
+    bottom: 5px;
+}
+
+/*========================================#####  SERVICES  #####========================================*/
+
+.services-container {
+    width: 100%;
+    float: left;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+/*========================================#####  SERVICES-CONTENT  #####========================================*/
+
+.services-content {
+    width: calc(88% / 3);
+    float: left;
+    margin-left: 4%;
+}
+
+.services-image {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 9%;
+}
+
+.services-image-text {
+    font-family: 'Georgia';
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 1px;
+}
+
+.services-sub {
+    position: relative;
+    bottom: 3px;
+}
+
+/*========================================#####  SERVICES-TEXT  #####========================================*/
+
+.services-text {
+    width: calc(91% - 50px - 30px);
+    float: left;
+}
+
+.services-text h3 {
+    font-family: 'Georgia';
+    font-size: 20px;
+    font-weight: 200;
+    color: #894aa3;
+    margin-bottom: 15px;
+}
+
+.services-text p {
+    font-family: 'Georgia';
+    font-size: 13px;
+    font-weight: lighter;
+    line-height: 140%;
+    color: #666666;
+}
+
+/*========================================#####  LATEST #####========================================*/
+
+.latest-container {
+    float: left;
+    width: 100%;
+    padding: 50px 0px 50px 0px;
+    background-color: #ebebea;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.latest-post {
+    float: left;
+    width: 260px;
+    padding: 10px;
+    margin-left: 4%;
+    background-color: #ffffff;
+}
+
+.latest-post-image {
+    position: relative;
+    width: 260px;
+    height: 180px;
+}
+
+.latest-post-image-size {
+    position: absolute;
+    display: inline-block;
+    bottom: 42.771%;
+    left: 26.923%;
+    font-size: 22px;
+    font-family: 'Georgia';
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.latest-post-text {
+    font-family: 'Georgia';
+    text-align: center;
+}
+
+.latest-post-text h3 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #894aa3;
+    margin: 16px 0;
+}
+
+.latest-post-text p {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #333333;
+    padding: 6px;
+}
+
+.upper-footer {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+.contact-details,
+.quick-links {
+    flex: 1;
+}
+
+.i-got-bored {
+    flex: 2;
+}
+
+.upper-footer .footer-col {
+    font-family: 'Georgia';
+    padding: 36px 26px;
+}
+
+.footer-col h3 {
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.footer-col p{
+    font-size: 12px;
+    color: #666;
+    line-height: 120%;
+}
+
+.contact-details .about {
+    margin-bottom: 10px;
+}
+
+.quick-links a {
+    font-size: 12px;
+    display: block;
+    text-decoration: none;
+    color: #666;
+    height: calc( 100% / 4 );
+}
+
+.quick-links a::after {
+    content: "";
+    display: block;
+    margin-top: 6px;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.i-got-bored {
+    background-color: #353535;
+    position: relative;
+}
+
+.i-got-bored .bored-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    position: absolute;
+    top: 50%; left: 50%;
+}
+
+.i-got-bored .bored-container.first {
+    transform: translate(-50%, -50%) rotate(26deg);
+}
+
+.i-got-bored .bored-container.second {
+    transform: translate(-50%, -50%) rotate(-26deg);
+}
+
+.i-got-bored h6 {
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 26px;
+    color: #fff;
+    margin: 0 20px;
+}
+
+.i-got-bored .line-b {
+    width: 20%;
+    height: 3px;
+    background-color: #fff;
+}

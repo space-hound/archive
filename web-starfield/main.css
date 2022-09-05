@@ -1,0 +1,41 @@
+html {
+  font-size: 10px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline; }
+
+body {
+  position: relative;
+  max-width: 100%;
+  min-height: 100vh;
+  line-height: 1;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #333333;
+  background-color: #ffffff; }
+
+a, p {
+  font-size: 1.6rem;
+  font-weight: 400; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+ol, ul {
+  list-style: none; }
+
+#starfield {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  #starfield canvas {
+    display: block; }
+

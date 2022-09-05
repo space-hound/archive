@@ -1,0 +1,74 @@
+body {
+    background-color: black;
+    color: white;
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .header {
+    display: flex;
+    justify-content: center;
+}
+
+.container .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .content .controls-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+
+.content .controls-container label {
+    color: orange;
+    margin-right: 9px;
+}
+
+.content .controls-container select,
+.content .controls-container input {
+    margin-right: 18px;
+}
+
+.content .controls-container select,
+.content .controls-container input,
+.content .controls-container button {
+    cursor: pointer;
+}
+
+.container .content #tags-container {
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content #tags-container .tag {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    margin: 3px;
+    border: 1px solid black;
+    border-radius: 9px;
+    background-color: grey;
+    color: white;
+}
+
+.content #tags-container .tag h3 {
+    margin: 18px 0px 9px 0px;
+    color: orange;
+    font-weight: 400;
+}
+
+.content #tags-container .tag p {
+    margin: 0px 0px 9px 0px;
+}
+
+.content #tags-container .tag h6 {
+    margin: 0px 0px 18px 0px;
+    font-size: .8rem;
+}

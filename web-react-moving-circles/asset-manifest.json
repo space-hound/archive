@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/web-react-moving-circles/static/css/main.125b814e.chunk.css",
+    "main.js": "/web-react-moving-circles/static/js/main.50c86ed0.chunk.js",
+    "main.js.map": "/web-react-moving-circles/static/js/main.50c86ed0.chunk.js.map",
+    "runtime-main.js": "/web-react-moving-circles/static/js/runtime-main.3abf5190.js",
+    "runtime-main.js.map": "/web-react-moving-circles/static/js/runtime-main.3abf5190.js.map",
+    "static/js/2.bd404cfe.chunk.js": "/web-react-moving-circles/static/js/2.bd404cfe.chunk.js",
+    "static/js/2.bd404cfe.chunk.js.map": "/web-react-moving-circles/static/js/2.bd404cfe.chunk.js.map",
+    "index.html": "/web-react-moving-circles/index.html",
+    "static/css/main.125b814e.chunk.css.map": "/web-react-moving-circles/static/css/main.125b814e.chunk.css.map",
+    "static/js/2.bd404cfe.chunk.js.LICENSE.txt": "/web-react-moving-circles/static/js/2.bd404cfe.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3abf5190.js",
+    "static/js/2.bd404cfe.chunk.js",
+    "static/css/main.125b814e.chunk.css",
+    "static/js/main.50c86ed0.chunk.js"
+  ]
+}

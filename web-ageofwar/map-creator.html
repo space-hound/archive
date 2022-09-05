@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Age Of War - Map Creator</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+<link href="styles/vendor.css" rel="stylesheet"><link href="styles/common.css" rel="stylesheet"><link href="styles/map-creator.css" rel="stylesheet"></head>
+
+<body>
+    <div id="app" class="app-wrapper map-creator__container">
+        <div class="menu" data-toggle="modal" data-target="#map-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="modal fade" id="map-menu" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Map Creator Menu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body d-flex flex-column">
+                    <button type="button" id="btn1" class="btn btn-primary"> Toggle Castle Pool (T) </button>
+                    <button type="button" id="btn2" class="btn btn-success"> Save Castle To File (Y) </button>
+                    <button type="button" id="btn3" class="btn btn-danger"> Reset Map (U) </button>
+                    <button type="button" id="btn4" class="btn btn-warning"> Go Back </button>
+                    <button type="button" id="btn5" class="btn btn-secondary" data-dismiss="modal"> Close (M) </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="js/vendor.js"></script><script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/map-creator.js"></script></body>
+
+</html>
