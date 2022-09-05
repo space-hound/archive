@@ -168,6 +168,12 @@ Project: https://github.com/space-hound/archive/tree/main/web-webpack4
 ### wfa-euclid
 Project: https://github.com/space-hound/archive/tree/main/wfa-euclid
 
+### wfa-blockschanger
+Project: https://github.com/space-hound/archive/tree/main/wfa-blockschanger
+
+### wfa-producerconsumer
+Project: https://github.com/space-hound/archive/tree/main/wfa-producerconsumer
+
 ## WPF
 
 ### wpf-calculator
