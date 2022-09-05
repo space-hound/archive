@@ -1,7 +1,5 @@
 # Archive Index
 
----
-
 ## Pinned
 
 ### electron-slots
@@ -33,14 +31,10 @@ Project: https://github.com/space-hound/archive/tree/main/web-vanillaquery
 ### wpf-mediaplayer
 Project: https://github.com/space-hound/archive/tree/main/wpf-mediaplayer
 
----
-
 ## Electron
 
 ### electron-slots
 Project: https://github.com/space-hound/archive/tree/main/electron-slots
-
----
 
 ## Web
 
@@ -169,14 +163,10 @@ Live Preview: https://space-hound.github.io/archive/web-skyrim-mods-viewer/
 ### web-webpack4
 Project: https://github.com/space-hound/archive/tree/main/web-webpack4
 
----
-
 ## WFA
 
 ### wfa-euclid
 Project: https://github.com/space-hound/archive/tree/main/wfa-euclid
-
----
 
 ## WPF
 
@@ -200,8 +190,6 @@ Project: https://github.com/space-hound/archive/tree/main/wpf-tictactoe
 
 ### wpf-todolist
 Project: https://github.com/space-hound/archive/tree/main/wpf-todolist
-
----
 
 ## Others
 
