@@ -163,6 +163,9 @@ Live Preview: https://space-hound.github.io/archive/web-skyrim-mods-viewer/
 ### web-webpack4
 Project: https://github.com/space-hound/archive/tree/main/web-webpack4
 
+### web-bitterview
+Project: https://github.com/space-hound/archive/tree/main/web-bitterview
+
 ## WFA
 
 ### wfa-euclid

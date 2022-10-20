@@ -1,0 +1,10 @@
+# APP
+node_modules/
+dist/
+
+# IDE
+.idea/
+.vscode/
+
+# MAC
+.DS_Store
