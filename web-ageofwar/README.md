@@ -1,8 +1,8 @@
 # web-ageofwar
 
- - [Live Demo Here!](https://space-hound.github.io/web-ageofwar/index.html)
- - [Rules Here!](https://space-hound.github.io/web-ageofwar/rules.html)
- - [Credits Here!](https://space-hound.github.io/web-ageofwar/credits.html)
+ - [Live Demo Here!](https://space-hound.github.io/archive/web-ageofwar/index.html)
+ - [Rules Here!](https://space-hound.github.io/archive/web-ageofwar/rules.html)
+ - [Credits Here!](https://space-hound.github.io/archive/web-ageofwar/credits.html)
 
 It's a JavaScript turn based game, where player have to conquer as many castles as they can with a set of dices.
 
